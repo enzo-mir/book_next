@@ -2,6 +2,10 @@
 
 This project will summarize my experices in web development by showing all revelant projects.
 
-# Design figma
+# Design figma 
 
-![Design preview](./public/landing_page_desktop.svg)
+Desktop Preview
+![Desktop design preview](./public/landing_page_desktop.svg)
+
+Mobile Preview
+![Mobile Design preview](./public/landing_page_mobile.svg)
