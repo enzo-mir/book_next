@@ -1,9 +1,34 @@
-import React from 'react'
+import React from "react";
+import styles from "../style/header.module.css";
+import Image from "next/image";
 
 const Header = () => {
   return (
-    <div>header</div>
-  )
-}
+    <header className={styles.header}>
+      <h2 className={styles.welcome}>
+        <span>Welcome</span>
+        <span> to my</span>
+      </h2>
+      <div className={styles.portfolioHeader}>
+        <h1>Portfolio</h1>
+        <span>Portfolio</span>
+      </div>
+      <ul className={styles.ulLink}>
+        <a href="https://github.com/enzo-mir" target="_blank">
+          <Image src="/github_link.svg" alt="icon github link" width={40} height={38} priority />
+          Github
+        </a>
+        <a href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
+          <Image src="/frontendmentor_link.svg" priority alt="icon front end mentor" width={40} height={38} />
+          FrontEndMentor
+        </a>
+        <a href="mailto:miraglioenzo93@gmail.com">
+          <Image src="/email_link.svg" priority alt="icon send email" width={40} height={38} />
+          Address
+        </a>
+      </ul>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
