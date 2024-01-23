@@ -1,0 +1,96 @@
+.projectsContainer {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3em;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 150px auto;
+  font-family: robot-light;
+}
+.headerCard {
+  position: relative;
+  background: linear-gradient(hsla(0, 0%, 0%, 0.8), transparent);
+  border-radius: 0.5em 0.5em 0 0;
+}
+.headerCard > h1 {
+  padding: 0.3em 0.5em;
+}
+.headerCard > img {
+  top: 0;
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5em 0.5em 0 0;
+  z-index: -1;
+}
+
+.bottomCard {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 1em;
+  padding: 1em;
+  background-color: var(--second-color);
+  border-radius: 0 0 0.5em 0.5em;
+  font-family: robot-regular;
+}
+.bottomCard > p {
+  line-height: 135%;
+}
+
+.tags {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 1em;
+}
+.tags > li {
+  background-color: var(--bg-color);
+  padding: 0.25em 0.5em;
+  border-radius: 0.2em;
+  transition: all 0.25s ease;
+}
+.tags > li:hover {
+  background-color: hsl(220, 35%, 15%);
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  gap: 1em;
+}
+.link > a {
+  position: relative;
+  color: var(--cta-color-brighter);
+  text-decoration: none;
+}
+.link > a:hover::after {
+  width: 0%;
+  left: 100%;
+}
+.link > a:hover::before {
+  width: 50%;
+  left: 50%;
+}
+.link > a::after,
+.link > a::before {
+  position: absolute;
+  transition: all 0.25s ease-out;
+  content: "";
+  bottom: -2px;
+  background-color: var(--cta-color-brighter);
+  height: 1px;
+}
+.link > a::before {
+  width: 0%;
+  left: 0%;
+}
+.link > a::after {
+  width: 50%;
+  left: 50%;
+}

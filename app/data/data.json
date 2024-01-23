@@ -13,7 +13,7 @@
   },
   {
     "id": 1,
-    "img_url": "/images/bookmark_landing_page.jpg",
+    "img_url": "/bookmark_landing_page.jpg",
     "webiste_url": "https://enzo-mir.github.io/bookmark-landing-page-master/",
     "git_url": "https://github.com/enzo-mir/bookmark-landing-page-master.git",
     "title": "Bookmark landing page",
@@ -25,7 +25,7 @@
   },
   {
     "id": 2,
-    "img_url": "/images/url_shorten_api.jpg",
+    "img_url": "/url_shorten_api.jpg",
     "webiste_url": "https://enzo-mir.github.io/url-shortening-api-master/",
     "git_url": "https://github.com/enzo-mir/url-shortening-api-master.git",
     "title": "Shortly URL shortening API",
@@ -37,7 +37,7 @@
   },
   {
     "id": 3,
-    "img_url": "/images/static_job_listing.jpg",
+    "img_url": "/static_job_listing.jpg",
     "webiste_url": "https://enzo-mir.github.io/static-job-listings-master/",
     "git_url": "https://github.com/enzo-mir/static-job-listings-master.git",
     "title": "Job listings with filtering",
@@ -49,7 +49,7 @@
   },
   {
     "id": 4,
-    "img_url": "/images/manage_landing_page.jpg",
+    "img_url": "/manage_landing_page.jpg",
     "webiste_url": "https://enzo-mir.github.io/manage-landing-page-master/",
     "git_url": "https://github.com/enzo-mir/manage-landing-page-master.git",
     "title": "Manage landing page",
@@ -61,7 +61,7 @@
   },
   {
     "id": 5,
-    "img_url": "/images/calculator_app.jpg",
+    "img_url": "/calculator_app.jpg",
     "webiste_url": "https://enzo-mir.github.io/calculatorAppFrontEndMentor/",
     "git_url": "https://github.com/enzo-mir/calculatorAppFrontEndMentor.git",
     "title": "Calculator app",
@@ -73,7 +73,7 @@
   },
   {
     "id": 6,
-    "img_url": "/images/ip_address_tracker.jpg",
+    "img_url": "/ip_address_tracker.jpg",
     "webiste_url": "https://enzo-mir.github.io/ip-address-tracker-master/",
     "git_url": "https://github.com/enzo-mir/ip-address-tracker-master.git",
     "title": "Ip address tracker",
@@ -85,7 +85,7 @@
   },
   {
     "id": 7,
-    "img_url": "/images/api_country.jpg",
+    "img_url": "/api_country.jpg",
     "webiste_url": "https://enzo-mir.github.io/frontendmentorCH3/",
     "git_url": "https://github.com/enzo-mir/frontendmentorCH3.git",
     "title": "REST Countries API",
@@ -97,19 +97,19 @@
   },
   {
     "id": 8,
-    "img_url": "/images/todo_app.jpg",
+    "img_url": "/todo_app.jpg",
     "webiste_url": "https://enzo-mir.github.io/todo_app_main/",
     "git_url": "https://github.com/enzo-mir/todo_app_main.git",
     "title": "Todo Main App",
     "description": "This todo app using session storage for theme and todos",
     "type": "frontend",
     "platforme": "frontendmentor",
-    "tag": ["Html", "Css", "Js", "Session Storage", "zustand"],
+    "tag": ["Html", "Css", "Js", "Session", "zustand"],
     "date": "Nov 20, 2023"
   },
   {
     "id": 9,
-    "img_url": "/images/countdown_timer.jpg",
+    "img_url": "/countdown_timer.jpg",
     "webiste_url": "https://enzo-mir.github.io/launch-countdown-timer-main/",
     "git_url": "https://github.com/enzo-mir/launch-countdown-timer-main.git",
     "title": "Launch countdown timer",
@@ -121,7 +121,7 @@
   },
   {
     "id": 10,
-    "img_url": "/images/game.jpg",
+    "img_url": "/game.jpg",
     "webiste_url": "https://enzo-mir.github.io/frontendmentorCH4/",
     "git_url": "https://github.com/enzo-mir/frontendmentorCH4.git",
     "title": "Rock, Paper, Scissors game",
@@ -133,7 +133,7 @@
   },
   {
     "id": 11,
-    "img_url": "/images/project_managment.jpg",
+    "img_url": "/project_managment.png",
     "webiste_url": "http://projectmanagment.uqkn2942.odns.fr/",
     "git_url": "https://github.com/enzo-mir/project_management_adonis.git",
     "title": "Project management adonis",
@@ -145,7 +145,7 @@
   },
   {
     "id": 12,
-    "img_url": "/images/restaurant_ecf.jpg",
+    "img_url": "/restaurant_ecf.png",
     "webiste_url": "https://ecf2024.fr/",
     "git_url": "https://github.com/enzo-mir/ecf_adonis-inertia.git",
     "title": "Reservation French Restaurant",

@@ -11,6 +11,7 @@
 :root {
   --bg-color: #0b0f17;
   --cta-color: #224482;
+  --cta-color-brighter: #356ACA;
   --second-color: #0a1529;
 }
 
@@ -80,6 +81,17 @@ li {
   font-family: "poppins-bold";
   src: url(./assets/fonts/Poppins-bold.ttf);
   font-weight: bold;
+}
+
+@font-face {
+  font-family: "robot-regular";
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "robot-light";
+  src: url(./assets/fonts/Roboto-Light.ttf);
+  font-weight: 300;
 }
 body,
 html {
