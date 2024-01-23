@@ -11,13 +11,14 @@ const Projects = () => {
   const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
 
   function filterByDate(array: projectsType) {
-    const orderedData = array.sort((a, b) => {
+    const orderedData: projectsType = array.sort((a, b) => {
       if (new Date(a.date) < new Date(b.date)) {
         return filter.date === "old" ? 1 : -1;
       }
       if (new Date(a.date) > new Date(b.date)) {
         return filter.date === "old" ? -1 : 1;
       }
+      return 0;
     });
     return orderedData;
   }
