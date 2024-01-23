@@ -1,7 +1,8 @@
 .projectsContainer {
   color: white;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 3em;
 }
 
@@ -9,6 +10,8 @@
   display: grid;
   grid-template-rows: 150px auto;
   font-family: robot-light;
+  height: 100%;
+  max-width: 400px;
 }
 .headerCard {
   position: relative;

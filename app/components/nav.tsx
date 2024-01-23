@@ -1,5 +1,5 @@
 "use client";
-import React, { HtmlHTMLAttributes } from "react";
+import React, { HtmlHTMLAttributes, SelectHTMLAttributes } from "react";
 import style from "../style/nav.module.css";
 import { filter_store } from "../data/filter_store";
 
@@ -10,6 +10,9 @@ const Nav = () => {
     (e.currentTarget as HTMLButtonElement).dataset.filter = (e.currentTarget as HTMLButtonElement).dataset.filter === "true" ? "false" : "true";
     const filterBy = datasetFilter === "false" ? "old" : "recent";
     setFilter({ ...filter, date: filterBy });
+  }
+  function handleChangeFilterPlatform(target: HTMLSelectElement) {
+    setFilter({ ...filter, platform: target.value as "all" | "frontendmentor" | "personnal" });
   }
 
   return (
@@ -29,8 +32,12 @@ const Nav = () => {
         </li>
         <li>
           Platform
-          <select name="platformFilter" id="platformFilter">
-            <option value="">All</option>
+          <select
+            name="platformFilter"
+            id="platformFilter"
+            onChange={(e: React.ChangeEvent) => handleChangeFilterPlatform(e.target as HTMLSelectElement)}
+          >
+            <option value="all">All</option>
             <option value="frontendmentor">Front End Mentor</option>
             <option value="personnal">Personnal</option>
           </select>
@@ -38,7 +45,7 @@ const Nav = () => {
         <li>
           Type
           <select name="typeFilter" id="typeFilter">
-            <option value="">All</option>
+            <option value="all">All</option>
             <option value="frontend">Front End</option>
             <option value="fullstack">Full Stack</option>
           </select>

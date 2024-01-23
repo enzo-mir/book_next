@@ -5,12 +5,13 @@ import projects from "../data/data.json";
 import { Suspense } from "react";
 import { filter_store } from "../data/filter_store";
 import FlipMove from "react-flip-move";
+import { filterType } from "../types/filterType";
 
 const Projects = () => {
   const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
 
-  function filterByDate() {
-    const orderedData = projects.sort((a, b) => {
+  function filterByDate(array: Array<filterType>) {
+    const orderedData = array.sort((a, b) => {
       if (new Date(a.date) < new Date(b.date)) {
         return filter.date === "old" ? 1 : -1;
       }
@@ -21,8 +22,15 @@ const Projects = () => {
     return orderedData;
   }
 
+  function filterByPlatform() {
+    const orderedData = filter.platform !== "all" ? projects.filter((project) => (project.platforme === filter.platform ? true : false)) : projects;
+    console.log(filter.platform);
+    
+    return orderedData as unknown as Array<filterType>;
+  }
+
   function filteredData() {
-    return filterByDate();
+    return filterByDate(filterByPlatform());
   }
 
   return (
