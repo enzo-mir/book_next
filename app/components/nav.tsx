@@ -14,7 +14,9 @@ const Nav = () => {
   function handleChangeFilterPlatform(target: HTMLSelectElement) {
     setFilter({ ...filter, platform: target.value as "all" | "frontendmentor" | "personnal" });
   }
-
+  function handleChangeFilterType(target: HTMLSelectElement) {
+    setFilter({ ...filter, type: target.value as "all" | "frontend" | "fullstack" });
+  }
   return (
     <nav className={style.nav}>
       <ul>
@@ -44,7 +46,7 @@ const Nav = () => {
         </li>
         <li>
           Type
-          <select name="typeFilter" id="typeFilter">
+          <select name="typeFilter" id="typeFilter" onChange={(e: React.ChangeEvent) => handleChangeFilterType(e.target as HTMLSelectElement)}>
             <option value="all">All</option>
             <option value="frontend">Front End</option>
             <option value="fullstack">Full Stack</option>

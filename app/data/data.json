@@ -7,7 +7,7 @@
     "title": "Tip calculator app",
     "description": "This app is made for claculate total tips and tip per person with default bill, custom tip and custom number of people",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js"],
     "date": "Dec 11, 2023"
   },
@@ -19,7 +19,7 @@
     "title": "Bookmark landing page",
     "description": "Landing page with carousel, accordion, email form checker",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js"],
     "date": "Dec 9, 2023"
   },
@@ -31,7 +31,7 @@
     "title": "Shortly URL shortening API",
     "description": "Landing page using url shorten services from rapidApi to short your url",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js", "Api"],
     "date": "Dec 4, 2023"
   },
@@ -43,7 +43,7 @@
     "title": "Job listings with filtering",
     "description": "This app filter data with tags selected",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js", "Json"],
     "date": "Nov 14, 2023"
   },
@@ -55,7 +55,7 @@
     "title": "Manage landing page",
     "description": "Landing page with comments slider",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js"],
     "date": "Dec 9, 2023"
   },
@@ -67,7 +67,7 @@
     "title": "Calculator app",
     "description": "Theme switcher calculator app",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js", "React", "styled-components"],
     "date": "Sep 15, 2023"
   },
@@ -79,7 +79,7 @@
     "title": "Ip address tracker",
     "description": "Search the location from ip address with ipify and ipapi",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js", "Api"],
     "date": "Nov 11, 2023"
   },
@@ -91,7 +91,7 @@
     "title": "REST Countries API",
     "description": "Search country with api (restcountries api) filtered by continents and learn all tips about it with theme switcher",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js", "Api"],
     "date": "Dec 6, 2022"
   },
@@ -103,7 +103,7 @@
     "title": "Todo Main App",
     "description": "This todo app using session storage for theme and todos",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js", "Session", "zustand"],
     "date": "Nov 20, 2023"
   },
@@ -115,7 +115,7 @@
     "title": "Launch countdown timer",
     "description": "This app is a countdown timer for 4 days",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js"],
     "date": "Nov 7, 2023"
   },
@@ -127,7 +127,7 @@
     "title": "Rock, Paper, Scissors game",
     "description": "Silmple Rock, Paper, Scissors game with score count",
     "type": "frontend",
-    "platforme": "frontendmentor",
+    "platform": "frontendmentor",
     "tag": ["Html", "Css", "Js"],
     "date": "Dec 8, 2022"
   },
@@ -139,7 +139,7 @@
     "title": "Project management adonis",
     "description": "The app contains authentification, CSR (client side rendering) with inertia and state managment",
     "type": "fullstack",
-    "platforme": "personnal",
+    "platform": "personnal",
     "tag": ["React", "Inertia", "AdonisJs", "Typescript", "Zod", "zustand"],
     "date": "Jan 7, 2024"
   },
@@ -151,7 +151,7 @@
     "title": "Reservation French Restaurant",
     "description": "This app is used to take a reservation with some userData if you are logged and flexible datas with the administrator pannel",
     "type": "fullstack",
-    "platforme": "personnal",
+    "platform": "personnal",
     "tag": ["React", "Inertia", "AdonisJs", "Typescript", "Zod", "zustand", "mysql"],
     "date": "Jan 21, 2024"
   }

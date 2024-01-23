@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import style from "../style/projects.module.css";
 import Image from "next/image";
-import projects from "../data/data.json";
 import { Suspense } from "react";
 import { filter_store } from "../data/filter_store";
 import FlipMove from "react-flip-move";
-import { filterType } from "../types/filterType";
+import projects from "../data/data.json";
+import { projectsType } from "../types/projectsType";
 
 const Projects = () => {
   const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
 
-  function filterByDate(array: Array<filterType>) {
+  function filterByDate(array: projectsType) {
     const orderedData = array.sort((a, b) => {
       if (new Date(a.date) < new Date(b.date)) {
         return filter.date === "old" ? 1 : -1;
@@ -22,15 +22,18 @@ const Projects = () => {
     return orderedData;
   }
 
-  function filterByPlatform() {
-    const orderedData = filter.platform !== "all" ? projects.filter((project) => (project.platforme === filter.platform ? true : false)) : projects;
-    console.log(filter.platform);
-    
-    return orderedData as unknown as Array<filterType>;
+  function filterByPlatform(array: projectsType) {
+    const orderedData = filter.platform !== "all" ? array.filter((project) => (project.platform === filter.platform ? true : false)) : array;
+    return orderedData;
+  }
+
+  function filterBytype(array: projectsType) {
+    const orderedData = filter.type !== "all" ? array.filter((project) => (project.type === filter.type ? true : false)) : array;
+    return orderedData;
   }
 
   function filteredData() {
-    return filterByDate(filterByPlatform());
+    return filterByDate(filterByPlatform(filterBytype(projects as projectsType)));
   }
 
   return (
