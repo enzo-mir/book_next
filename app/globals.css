@@ -11,7 +11,7 @@
 :root {
   --bg-color: #0b0f17;
   --cta-color: #224482;
-  --cta-color-brighter: #356ACA;
+  --cta-color-brighter: #356aca;
   --second-color: #0a1529;
 }
 
@@ -108,4 +108,11 @@ body {
   gap: 5svh;
   background-color: var(--bg-color);
   font-family: poppins-regular;
+}
+main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 3em;
+  width: 100%;
+  padding-inline: 5%;
 }
