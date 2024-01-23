@@ -59,12 +59,7 @@
   padding: 0.5em;
   color: white;
 }
-.search > button {
-  border: none;
-  border-radius: 5px;
-  background: transparent;
-  color: white;
-}
+
 @media screen and (max-width: 1000px) {
   .nav > ul {
     display: flex;

@@ -1,5 +1,5 @@
 "use client";
-import React, { HtmlHTMLAttributes, SelectHTMLAttributes } from "react";
+import React from "react";
 import style from "../style/nav.module.css";
 import { filter_store } from "../data/filter_store";
 
@@ -12,10 +12,10 @@ const Nav = () => {
     setFilter({ ...filter, date: filterBy });
   }
   function handleChangeFilterPlatform(target: HTMLSelectElement) {
-    setFilter({ ...filter, platform: target.value as "all" | "frontendmentor" | "personnal" });
+    setFilter({ ...filter, platform: target.value as "all" | "frontendmentor" | "personnal", search: "" });
   }
   function handleChangeFilterType(target: HTMLSelectElement) {
-    setFilter({ ...filter, type: target.value as "all" | "frontend" | "fullstack" });
+    setFilter({ ...filter, type: target.value as "all" | "frontend" | "fullstack", search: "" });
   }
   return (
     <nav className={style.nav}>
@@ -38,6 +38,7 @@ const Nav = () => {
             name="platformFilter"
             id="platformFilter"
             onChange={(e: React.ChangeEvent) => handleChangeFilterPlatform(e.target as HTMLSelectElement)}
+            value={filter.platform}
           >
             <option value="all">All</option>
             <option value="frontendmentor">Front End Mentor</option>
@@ -46,7 +47,12 @@ const Nav = () => {
         </li>
         <li>
           Type
-          <select name="typeFilter" id="typeFilter" onChange={(e: React.ChangeEvent) => handleChangeFilterType(e.target as HTMLSelectElement)}>
+          <select
+            name="typeFilter"
+            value={filter.type}
+            id="typeFilter"
+            onChange={(e: React.ChangeEvent) => handleChangeFilterType(e.target as HTMLSelectElement)}
+          >
             <option value="all">All</option>
             <option value="frontend">Front End</option>
             <option value="fullstack">Full Stack</option>
@@ -54,8 +60,14 @@ const Nav = () => {
         </li>
 
         <li className={style.search}>
-          <input type="search" name="searchFilter" id="searchFilter" placeholder="Search projects by title" />
-          <button>Search</button>
+          <input
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilter({ type: "all", platform: "all", date: "recent", search: e.target.value })}
+            type="search"
+            value={filter.search}
+            name="searchFilter"
+            id="searchFilter"
+            placeholder="Search projects by title"
+          />
         </li>
       </ul>
     </nav>
