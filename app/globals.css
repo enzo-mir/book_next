@@ -11,6 +11,7 @@
 :root {
   --bg-color: #0b0f17;
   --cta-color: #224482;
+  --second-color: #0a1529;
 }
 
 ul[role="list"],
@@ -62,7 +63,9 @@ select {
     transition: none;
   }
 }
-
+li {
+  list-style-type: none;
+}
 @font-face {
   font-family: "poppins-light";
   src: url(./assets/fonts/Poppins-Light.ttf);
@@ -88,7 +91,8 @@ html {
 body {
   display: grid;
   place-items: start center;
-  padding-top: 2em;
+  grid-template-rows: auto 1fr auto;
+  padding-block: 2em 1em;
   gap: 5svh;
   background-color: var(--bg-color);
   font-family: poppins-regular;
