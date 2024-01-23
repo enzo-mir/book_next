@@ -1,8 +1,17 @@
 "use client";
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 import style from "../style/nav.module.css";
+import { filter_store } from "../data/filter_store";
 
 const Nav = () => {
+  const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
+
+  function handleChangeFilterDate(e: React.MouseEvent, datasetFilter: "true" | "false") {
+    (e.currentTarget as HTMLButtonElement).dataset.filter = (e.currentTarget as HTMLButtonElement).dataset.filter === "true" ? "false" : "true";
+    const filterBy = datasetFilter === "false" ? "old" : "recent";
+    setFilter({ ...filter, date: filterBy });
+  }
+
   return (
     <nav className={style.nav}>
       <ul>
@@ -10,10 +19,8 @@ const Nav = () => {
           Date{" "}
           <button
             className={style.buttonDate}
-            onClick={(e: React.MouseEvent) =>
-              ((e.currentTarget as HTMLButtonElement).dataset.filter =
-                (e.currentTarget as HTMLButtonElement).dataset.filter === "true" ? "false" : "true")
-            }
+            data-filter="false"
+            onClick={(e) => handleChangeFilterDate(e, e.currentTarget.dataset.filter as "true" | "false")}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
               <path d="M22.5 2.375L12.25 12.625L2 2.375" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />

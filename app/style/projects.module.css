@@ -13,7 +13,7 @@
 .headerCard {
   position: relative;
   background: linear-gradient(hsla(0, 0%, 0%, 0.8), transparent);
-  border-radius: 0.5em 0.5em 0 0;
+  border-radius: 0.25em 0.25em 0 0;
 }
 .headerCard > h1 {
   padding: 0.3em 0.5em;
@@ -47,7 +47,7 @@
   justify-content: start;
   flex-wrap: wrap;
   align-items: start;
-  gap: 1em;
+  gap: 0.5em 1em;
 }
 .tags > li {
   background-color: var(--bg-color);
