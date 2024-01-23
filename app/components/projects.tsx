@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import style from "../style/projects.module.css";
 import Image from "next/image";
@@ -55,8 +56,8 @@ const Projects = () => {
             <article key={project.id} className={style.card}>
               <div className={style.headerCard}>
                 <h1>{project.title}</h1>
-                <Suspense fallback={<Image alt="loading" src="/image_loading.svg" priority width={100} height={100} />}>
-                  <Image alt={project.title} src={project.img_url} priority width={200} height={150} />
+                <Suspense fallback={<Image alt="loading" src="/image_loading.svg" priority fill />}>
+                  <img alt={project.title} src={project.img_url} fetchPriority="high" width={300} height={150} />
                 </Suspense>
               </div>
               <div className={style.bottomCard}>
