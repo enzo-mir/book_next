@@ -1,12 +1,12 @@
 "use client";
-import Nav from "./components/nav";
-import Projects from "./components/projects";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Book from "./components/book";
 
 export default function Home() {
   return (
     <main>
-      <Nav />
-      <Projects />
+      <GoogleAnalytics gaId="G-EL3FB4G0L0" />
+      <Book />
     </main>
   );
 }

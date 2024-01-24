@@ -57,7 +57,7 @@ const Projects = () => {
               <div className={style.headerCard}>
                 <h1>{project.title}</h1>
                 <Suspense fallback={<Image alt="loading" src="/image_loading.svg" priority fill />}>
-                  <img alt={project.title} src={project.img_url} fetchPriority="high" width={300} height={150} />
+                  <img alt={project.title} src={project.img_url} fetchPriority="high" width="300" height="150" loading="lazy" />
                 </Suspense>
               </div>
               <div className={style.bottomCard}>

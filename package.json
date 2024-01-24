@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
+    "@next/third-parties": "^14.1.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",

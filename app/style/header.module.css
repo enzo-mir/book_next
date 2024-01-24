@@ -31,15 +31,18 @@
   width: fit-content;
   max-height: 100%;
   font-size: clamp(70px, 7vw, 150px);
+  
 }
 
 .portfolioHeader h1 {
   clip-path: polygon(100% 0, 0% 100%, 0 0);
+  transform: translateX(-80%) translateY(-50%);
   animation: welcomeH1 1s ease-in-out forwards;
 }
 .portfolioHeader span {
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   animation: welcomeSpan ease-in-out 1s forwards;
+  transform: translateX(-20%) translateY(-50%);
   color: var(--cta-color);
 }
 
@@ -63,24 +66,24 @@
 
 @keyframes welcomeH1 {
   from {
-    transform: translate(-80%, -50%);
+    transform: translateX(-80%) translateY(-50%);
   }
   50% {
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%) translateY(-50%);
   }
   100% {
-    transform: translate(-60%, -50%);
+    transform: translateX(-60%) translateY(-50%);
   }
 }
 @keyframes welcomeSpan {
   from {
-    transform: translate(-20%, -50%);
+    transform: translateX(-20%) translateY(-50%);
   }
   50% {
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%) translateY(-50%);
   }
   100% {
-    transform: translate(-40%, -50%);
+    transform: translateX(-40%) translateY(-50%);
   }
 }
 
