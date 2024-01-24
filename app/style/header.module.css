@@ -64,7 +64,21 @@
   text-decoration: none;
   font-size: clamp(12px, 2.5vw, 15px);
 }
-
+.ulLink > li:first-child > svg > g > path {
+  fill: var(--cta-color-brighter);
+}
+.ulLink > li:nth-child(2) > svg > rect {
+  fill: var(--cta-color-brighter);
+}
+.ulLink > li:nth-child(2) > svg > path {
+  fill: var(--bg-color);
+}
+.ulLink > li:last-child > svg > rect {
+  fill: var(--cta-color-brighter);
+}
+.ulLink > li:last-child > svg > path {
+  stroke: var(--bg-color);
+}
 @keyframes welcomeH1 {
   from {
     transform: translateX(-80%) translateY(-50%);
