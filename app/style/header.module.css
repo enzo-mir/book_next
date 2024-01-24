@@ -50,12 +50,14 @@
   gap: 1em;
   height: 100%;
 }
-.ulLink > a {
+.ulLink > li {
   display: flex;
   justify-content: start;
-  gap: 0.5em;
-  font-family: poppins-bold;
   align-items: center;
+  font-family: poppins-bold;
+  gap: 0.5em;
+}
+.ulLink > li > a {
   color: white;
   text-decoration: none;
   font-size: clamp(12px, 2.5vw, 15px);
