@@ -1,17 +1,31 @@
 import React from "react";
 import styles from "../style/header.module.css";
+import { displayMainPage } from "../data/displayPage_store";
 
 const Header = () => {
+  const ContentTitle = () => {
+    const [mainPage, setMainPage] = displayMainPage((state) => [state.mainPage, state.setMainPage]);
+    function handleChangeMainPage() {
+      setMainPage(mainPage === "book" ? "portfolio" : "book");
+    }
+    return (
+      <div className={styles.headerTitle}>
+        <div className={mainPage === "book" ? styles.book : styles.portfolio}>
+          <h1>{mainPage}</h1>
+          <span>{mainPage}</span>
+        </div>
+        <button onClick={handleChangeMainPage}>{mainPage === "book" ? "Go to portfolio" : "Go to book"}</button>
+      </div>
+    );
+  };
+
   return (
     <header className={styles.header}>
       <h2 className={styles.welcome}>
         <span>Welcome</span>
         <span> to my</span>
       </h2>
-      <div className={styles.portfolioHeader}>
-        <h1>Portfolio</h1>
-        <span>Portfolio</span>
-      </div>
+      <ContentTitle />
       <ul className={styles.ulLink}>
         <li>
           <svg width="41" height="39" viewBox="0 0 41 39" fill="none" xmlns="http://www.w3.org/2000/svg">
