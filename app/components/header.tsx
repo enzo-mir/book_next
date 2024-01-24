@@ -14,18 +14,22 @@ const Header = () => {
         <span>Portfolio</span>
       </div>
       <ul className={styles.ulLink}>
-        <a href="https://github.com/enzo-mir" target="_blank">
+        <li>
           <Image src="/github_link.svg" alt="icon github link" width={40} height={38} priority />
-          Github
-        </a>
-        <a href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
+          <a href="https://github.com/enzo-mir" target="_blank">
+            Github
+          </a>
+        </li>
+        <li>
           <Image src="/frontendmentor_link.svg" priority alt="icon front end mentor" width={40} height={38} />
-          FrontEndMentor
-        </a>
-        <a href="mailto:miraglioenzo93@gmail.com">
+          <a href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
+            FrontEndMentor
+          </a>
+        </li>
+        <li>
           <Image src="/email_link.svg" priority alt="icon send email" width={40} height={38} />
-          Address
-        </a>
+          <a href="mailto:miraglioenzo93@gmail.com">Address</a>
+        </li>
       </ul>
     </header>
   );
