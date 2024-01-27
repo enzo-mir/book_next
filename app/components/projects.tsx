@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
-import style from "../style/projects.module.css";
+import style from "../style/book/projects.module.css";
 import Image from "next/image";
 import { Suspense } from "react";
 import { filter_store } from "../data/filter_store";

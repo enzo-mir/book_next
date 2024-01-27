@@ -100,13 +100,13 @@ body[data-page="book"] {
   --bg-color: hsl(0, 35%, 7%);
   --cta-color: hsl(0, 60%, 32%);
   --cta-color-brighter: hsl(0, 58%, 50%);
-  --second-color: hsl(0, 61%, 10%);
+  --second-color: hsl(0, 61%, 15%);
 }
 body[data-page="portfolio"] {
   --bg-color: #0b0f17;
   --cta-color: #224482;
   --cta-color-brighter: #356aca;
-  --second-color: #0a1529;
+  --second-color: hsl(219, 61%, 15%);
 }
 body {
   display: grid;

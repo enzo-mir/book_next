@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import style from "../style/nav.module.css";
+import style from "../style/book/nav.module.css";
 import { filter_store } from "../data/filter_store";
 
 const Nav = () => {
