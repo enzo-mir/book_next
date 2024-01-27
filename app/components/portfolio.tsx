@@ -1,20 +1,22 @@
 import Image from "next/image";
 import React from "react";
-
+import styles from "../style/portfolio/portfolio.module.css";
 const Portfolio = () => {
   return (
     <>
-      <section>
-        <h1>Hi thers !</h1>
+      <section className={styles.secctionHeader}>
+        <h1>Hi there !</h1>
         <p>
           I&apos;m Enzo Miraglio
           <br />
           <strong>developer</strong> based in France
         </p>
       </section>
-      <section>
-        <h1>skills</h1>
-
+      <section className={styles.sectionSkills}>
+        <div className={styles.headSkills}>
+          <h1>skills</h1>
+          <hr />
+        </div>
         <article>
           <h2>Front-end</h2>
           <ul>
