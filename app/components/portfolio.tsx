@@ -1,7 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import styles from "../style/portfolio/portfolio.module.css";
+import { RxCross2 } from "react-icons/rx";
+
 const Portfolio = () => {
+  function changeAccordionActive(target: HTMLElement) {
+    const currentAttribute = target.parentElement?.dataset.active;
+    target.parentElement!.dataset.active = currentAttribute === "true" ? "false" : "true";
+  }
+
   return (
     <>
       <section className={styles.secctionHeader}>
@@ -56,29 +63,38 @@ const Portfolio = () => {
           </div>
         </article>
       </section>
-      <section>
-        <h1>FAQ&apos;s</h1>
+      <section className={styles.sectionFaq}>
+        <div className={styles.headSkills}>
+          <h1>FAQ&apos;s</h1>
+          <hr />
+        </div>
         <div>
-          <article>
+          <article data-active="true">
             <h2>What’s my experience ?</h2>
-            <button>+</button>
-            <div>
+            <button onClick={(e) => changeAccordionActive(e.currentTarget as HTMLElement)}>
+              <RxCross2 />
+            </button>
+            <div className={styles.bottomFaq}>
               <p>
                 I have actually 3 years of personnal experience in web development, 1 year with react and I recently adopted the Back-end development
               </p>
             </div>
           </article>
-          <article>
+          <article data-active="false">
             <h2>What to expect of me ?</h2>
-            <button>+</button>
-            <div>
+            <button onClick={(e) => changeAccordionActive(e.currentTarget as HTMLElement)}>
+              <RxCross2 />
+            </button>
+            <div className={styles.bottomFaq}>
               <p>I am a Front-end developer which try to have knowledge in back development and design</p>
             </div>
           </article>
-          <article>
+          <article data-active="false">
             <h2>How many times do I spend by projects ? </h2>
-            <button>+</button>
-            <div>
+            <button onClick={(e) => changeAccordionActive(e.currentTarget as HTMLElement)}>
+              <RxCross2 />
+            </button>
+            <div className={styles.bottomFaq}>
               <p>
                 This is relative to the difficulty of the project, for an integration of design as landing page, SPA, this will be between 3 and 6
                 hours (hosted inclued) else for a full stack application this will be longer.

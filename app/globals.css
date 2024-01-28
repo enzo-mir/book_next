@@ -106,6 +106,7 @@ body[data-page="portfolio"] {
   --bg-color: #0b0f17;
   --cta-color: #224482;
   --cta-color-brighter: #356aca;
+  --cta-color-brighter-a50: hsla(219, 58%, 50%, 0.5);
   --second-color: hsl(219, 61%, 15%);
 }
 body {

@@ -130,6 +130,80 @@
   padding: 0 1em 1em 0;
   grid-area: 2 / 3 / 3 / 5;
 }
+
+.sectionFaq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+.sectionFaq > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 3em;
+  width: 50%;
+  min-width: 500px;
+}
+
+.sectionFaq > div > article {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 0fr;
+  row-gap: 1em;
+  width: 100%;
+  border-bottom: 5px solid var(--cta-color-brighter);
+  transition: all 0.5s ease-out;
+  border-radius: 0px;
+}
+.sectionFaq > div > article > h2 {
+  align-self: center;
+}
+.sectionFaq > div > article > button {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  padding: 0.5em;
+}
+.sectionFaq > div > article > button:hover {
+  cursor: pointer;
+}
+.sectionFaq > div > article > button > svg {
+  width: 100%;
+  transform: rotate(45deg);
+  transition: all 0.25s ease-out;
+}
+.sectionFaq > div > article > button > svg > path {
+  fill: white;
+  width: 100%;
+  height: 100%;
+}
+
+.bottomFaq {
+  grid-area: 2 / 1 / 3 / 3;
+  overflow: hidden;
+  background-color: var(--cta-color-brighter-a50);
+  transition: all 0.25s ease-out;
+  padding: 0em 1em;
+  border-radius: 5px 5px 0 0;
+}
+.bottomFaq > p {
+  line-height: 200%;
+}
+.sectionFaq > div > article[data-active="true"] {
+  grid-template-rows: auto 1fr;
+  border-radius: 5px;
+}
+.sectionFaq > div > article[data-active="true"] > button > svg {
+  transform: rotate(0deg);
+}
+.sectionFaq > div > article[data-active="true"] > div {
+  padding: 1.5em 1em;
+}
+
 @media screen and (max-width: 600px) {
   .sectionSkills > article > div {
     display: none;
@@ -146,5 +220,8 @@
     justify-content: center;
     align-items: center;
     max-width: max-content;
+  }
+  .sectionFaq > div:nth-child(2) {
+    min-width: 100%;
   }
 }
