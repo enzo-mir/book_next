@@ -3,4 +3,6 @@
     place-items: center;
     width: 100%;
     color: white;
+    font-size: clamp(12px, 2.5vw, 15px);
+    padding-block: 2em;
 }
