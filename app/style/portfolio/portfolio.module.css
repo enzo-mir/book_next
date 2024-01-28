@@ -138,6 +138,7 @@
   align-items: center;
   color: white;
   width: 100%;
+  gap: 5svh;
 }
 .sectionFaq > div:nth-child(2) {
   display: flex;
@@ -208,7 +209,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: clamp(125px, 15svh, 150px);
+  height: 150px;
   color: white;
   gap: 1em;
   font-size: clamp(15px, 2.5vw, 20px);
