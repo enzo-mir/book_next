@@ -204,7 +204,32 @@
   padding: 1.5em 1em;
 }
 
+.sectionFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(125px, 15svh, 150px);
+  color: white;
+  gap: 1em;
+  font-size: clamp(15px, 2.5vw, 20px);
+}
+.sectionFooter > button {
+  background-color: var(--cta-color-brighter);
+  border: none;
+  padding: 0.5em 0.75em;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.25s ease-out;
+}
+.sectionFooter > button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
 @media screen and (max-width: 600px) {
+  .sectionFooter {
+    flex-direction: column;
+  }
   .sectionSkills > article > div {
     display: none;
   }

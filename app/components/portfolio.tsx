@@ -103,7 +103,7 @@ const Portfolio = () => {
           </article>
         </div>
       </section>
-      <section>
+      <section className={styles.sectionFooter}>
         <h1>Want a dev ?</h1>
         <button>Contact me !</button>
       </section>
