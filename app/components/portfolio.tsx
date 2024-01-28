@@ -105,7 +105,7 @@ const Portfolio = () => {
       </section>
       <section className={styles.sectionFooter}>
         <h1>Want a dev ?</h1>
-        <button>Contact me !</button>
+        <button onClick={() => (window.location.href = "mailto:miraglioenzo93@gmail.com")}>Contact me !</button>
       </section>
     </>
   );
