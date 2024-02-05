@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../style/header.module.css";
 import { displayMainPage } from "../data/displayPage_store";
-
+import { motion } from "framer-motion";
 const Header = () => {
   const ContentTitle = () => {
     const [mainPage, setMainPage] = displayMainPage((state) => [state.mainPage, state.setMainPage]);
@@ -9,13 +9,13 @@ const Header = () => {
       setMainPage(mainPage === "book" ? "portfolio" : "book");
     }
     return (
-      <div className={styles.headerTitle}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.headerTitle}>
         <div className={mainPage === "book" ? styles.book : styles.portfolio}>
           <h1>{mainPage}</h1>
           <span>{mainPage}</span>
         </div>
         <button onClick={handleChangeMainPage}>{mainPage === "book" ? "Go to portfolio" : "Go to book"}</button>
-      </div>
+      </motion.div>
     );
   };
 

@@ -1,9 +1,57 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "../style/portfolio/portfolio.module.css";
 import { RxCross2 } from "react-icons/rx";
+import { LazyMotion, animate, inView, motion, useInView } from "framer-motion";
+import { log } from "console";
 
 const Portfolio = () => {
+  function SkillsComponents() {
+    const skillsAssets = [
+      {
+        id: 0,
+        title: "Front-end",
+        tags: ["#React", "#NextJs", "#TypeScript", "#Tailwind", "#Zustand", "#Styled-components"],
+        image: "/react_frontend.webp",
+        alt: "react logo in galaxy",
+      },
+      {
+        id: 1,
+        title: "Back-end",
+        tags: ["#AdonisJs", "#Inertia", "#Zod", "#NodeJs", "#Fastify"],
+        image: "/adonis_backend.webp",
+        alt: "adonis logo curved",
+      },
+      {
+        id: 2,
+        title: "Others",
+        tags: ["#Figma", "#Github", "#VsCode"],
+        image: "/figma_others.jpg",
+        alt: "figma logo",
+      },
+    ];
+
+    return skillsAssets.map((skills) => {
+      return (
+        <motion.article
+          key={skills.id}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.1 * skills.id } }}
+        >
+          <h2>{skills.title}</h2>
+          <ul>
+            {skills.tags.map((tag, index) => {
+              return <li key={index}>{tag}</li>;
+            })}
+          </ul>
+          <div>
+            <Image src={skills.image} alt={skills.alt} width={600} height={300} priority />
+          </div>
+        </motion.article>
+      );
+    });
+  }
+
   function changeAccordionActive(target: HTMLElement) {
     const currentAttribute = target.parentElement?.dataset.active;
     target.parentElement!.dataset.active = currentAttribute === "true" ? "false" : "true";
@@ -22,46 +70,9 @@ const Portfolio = () => {
       <section className={styles.sectionSkills}>
         <div className={styles.headSkills}>
           <h1>skills</h1>
-          <hr />
+          <motion.hr initial={{ width: 0 }} animate={{ width: "100%", transition: { duration: 0.5 } }} />
         </div>
-        <article>
-          <h2>Front-end</h2>
-          <ul>
-            <li>#React</li>
-            <li>#NextJs</li>
-            <li>#TypeScript</li>
-            <li>#Tailwind</li>
-            <li>#Zustand</li>
-            <li>#Styled-components</li>
-          </ul>
-          <div>
-            <Image src="/react_frontend.webp" alt="react logo in galaxy" width={600} height={300} priority />
-          </div>
-        </article>
-        <article>
-          <div>
-            <Image src="/adonis_backend.webp" alt="adonis logo curved" width={600} height={300} priority />
-          </div>
-          <h2>Back-end</h2>
-          <ul>
-            <li>#AdonisJs</li>
-            <li>#Inertia</li>
-            <li>#Zod</li>
-            <li>#NodeJs</li>
-            <li>#Fastify</li>
-          </ul>
-        </article>
-        <article>
-          <h2>Others</h2>
-          <ul>
-            <li>#Figma</li>
-            <li>#Github</li>
-            <li>#VsCode</li>
-          </ul>
-          <div>
-            <Image src="/figma_others.jpg" alt="figma logo" width={600} height={300} priority />
-          </div>
-        </article>
+        <SkillsComponents />
       </section>
       <section className={styles.sectionFaq}>
         <div className={styles.headSkills}>

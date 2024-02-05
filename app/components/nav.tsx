@@ -2,6 +2,7 @@
 import React from "react";
 import style from "../style/book/nav.module.css";
 import { filter_store } from "../data/filter_store";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
@@ -18,7 +19,7 @@ const Nav = () => {
     setFilter({ ...filter, type: target.value as "all" | "frontend" | "fullstack", search: "" });
   }
   return (
-    <nav className={style.nav}>
+    <motion.nav initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} className={style.nav}>
       <ul>
         <li>
           Date{" "}
@@ -70,7 +71,7 @@ const Nav = () => {
           />
         </li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 

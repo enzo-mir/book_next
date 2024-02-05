@@ -7,6 +7,7 @@ import { filter_store } from "../data/filter_store";
 import FlipMove from "react-flip-move";
 import projects from "../data/data.json";
 import { projectsType } from "../types/projectsType";
+import { motion, stagger } from "framer-motion";
 
 const Projects = () => {
   const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
@@ -34,10 +35,7 @@ const Projects = () => {
     return orderedData;
   }
   function filterBySearch(searchValue: string) {
-    return projects.filter(
-      (project) =>
-        project.title.toLowerCase().substring(0, searchValue.split("").length) == searchValue.toLowerCase().substring(0, searchValue.split("").length)
-    ) as projectsType;
+    return projects.filter((project) => project.title.toLowerCase().includes(searchValue.toLowerCase())) as projectsType;
   }
 
   function filteredData() {

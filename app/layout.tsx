@@ -1,9 +1,7 @@
 "use client";
-import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { displayMainPage } from "./data/displayPage_store";
 
 export default function RootLayout({
@@ -15,15 +13,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Portfolio Book - @enzmrg</title>
-        <meta name="description" content="portfolio" />
+        <title>Portfolio - @enzomrg</title>
+        <meta name="description" content="portfolio enzo miraglio toulouse développeur front-end" />
       </head>
       <body data-page={mainPage}>
         <Header />
         {children}
         <Footer />
       </body>
-      <GoogleAnalytics gaId="G-EL3FB4G0L0" />
     </html>
   );
 }
