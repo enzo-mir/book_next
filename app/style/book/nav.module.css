@@ -71,6 +71,9 @@
 }
 
 .liTags > button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: fit-content;
   justify-self: center;
   align-self: center;
@@ -78,6 +81,7 @@
   color: white;
   padding: 0.25em 0.75em;
   border: none;
+  width: 75%;
   transition: all 0.25s ease-out;
   border-radius: 5px;
 }
@@ -124,7 +128,9 @@
   padding-inline: 0.25em;
   border-radius: 5px;
 }
-
+.li_selected {
+  background: var(--second-color);
+}
 .liTags > ol > li:hover {
   background-color: var(--second-color);
   cursor: pointer;

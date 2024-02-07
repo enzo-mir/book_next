@@ -12,10 +12,17 @@ const Nav = () => {
     const arr: Array<string> = [];
     datas.map((data) => {
       return data.tag.map((tag) => {
-        !arr.includes(tag) && arr.push(tag);
+        return !arr.includes(tag) && arr.push(tag);
       });
     });
     return arr;
+  }
+
+  function unselectTag() {
+    tagsConstRef.current?.dataset.visible === "true" ? (tagsConstRef.current!.dataset.visible = "false") : null;
+    setTimeout(() => {
+      window.removeEventListener("click", unselectTag);
+    }, 500);
   }
 
   function handleChangeFilterDate(e: React.MouseEvent, datasetFilter: "true" | "false") {
@@ -24,13 +31,22 @@ const Nav = () => {
     setFilter({ ...filter, date: filterBy });
   }
   function handleChangeFilterTags(tag: string) {
-    setFilter({ ...filter, tags: [...filter.tags, tag], search: "" });
+    if (!filter.tags.includes(tag)) {
+      setFilter({ ...filter, tags: [...filter.tags, tag], search: "" });
+    } else {
+      const newFilterTag = filter.tags;
+      newFilterTag.splice(filter.tags.indexOf(tag), 1);
+      setFilter({ ...filter, tags: newFilterTag });
+    }
   }
   function handleChangeFilterType(target: HTMLSelectElement) {
     setFilter({ ...filter, type: target.value as "frontend" | "fullstack" | "all", search: "" });
   }
   const displayTagsOption = () => {
     tagsConstRef.current!.dataset.visible = tagsConstRef.current?.dataset.visible === "false" ? "true" : "false";
+    setTimeout(() => {
+      window.addEventListener("click", unselectTag);
+    }, 500);
   };
 
   return (
@@ -44,16 +60,21 @@ const Nav = () => {
             onClick={(e) => handleChangeFilterDate(e, e.currentTarget.dataset.filter as "true" | "false")}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
-              <path d="M22.5 2.375L12.25 12.625L2 2.375" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M22.5 2.375L12.25 12.625L2 2.375" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </li>
         <li className={style.liTags}>
-          <button onClick={displayTagsOption}>Tags</button>
-          <ol data-visible="false" ref={tagsConstRef}>
+          <button onClick={displayTagsOption}>
+            Tags
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="13" viewBox="0 0 24 15" fill="none">
+              <path d="M22.5 2.375L12.25 12.625L2 2.375" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <ol data-visible="false" ref={tagsConstRef} onClick={(e) => e.stopPropagation()}>
             {getTags().map((tag, index) => {
               return (
-                <li key={index} className={filter.tags.includes(tag) ? "selected" : ""} onClick={(e) => handleChangeFilterTags(tag)}>
+                <li key={index} className={filter.tags.includes(tag) ? style.li_selected : ""} onClick={(e) => handleChangeFilterTags(tag)}>
                   {tag}
                 </li>
               );
