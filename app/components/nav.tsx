@@ -1,23 +1,38 @@
 "use client";
-import React from "react";
+import React, { ElementRef, useRef } from "react";
 import style from "../style/book/nav.module.css";
 import { filter_store } from "../data/filter_store";
 import { motion } from "framer-motion";
+import datas from "../data/data.json";
 
 const Nav = () => {
   const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
+  const tagsConstRef = useRef<ElementRef<"ol">>(null);
+  function getTags() {
+    const arr: Array<string> = [];
+    datas.map((data) => {
+      return data.tag.map((tag) => {
+        !arr.includes(tag) && arr.push(tag);
+      });
+    });
+    return arr;
+  }
 
   function handleChangeFilterDate(e: React.MouseEvent, datasetFilter: "true" | "false") {
     (e.currentTarget as HTMLButtonElement).dataset.filter = (e.currentTarget as HTMLButtonElement).dataset.filter === "true" ? "false" : "true";
     const filterBy = datasetFilter === "false" ? "old" : "recent";
     setFilter({ ...filter, date: filterBy });
   }
-  function handleChangeFilterPlatform(target: HTMLSelectElement) {
-    setFilter({ ...filter, platform: target.value as "all" | "frontendmentor" | "personnal", search: "" });
+  function handleChangeFilterTags(tag: string) {
+    setFilter({ ...filter, tags: [...filter.tags, tag], search: "" });
   }
   function handleChangeFilterType(target: HTMLSelectElement) {
-    setFilter({ ...filter, type: target.value as "all" | "frontend" | "fullstack", search: "" });
+    setFilter({ ...filter, type: target.value as "frontend" | "fullstack" | "all", search: "" });
   }
+  const displayTagsOption = () => {
+    tagsConstRef.current!.dataset.visible = tagsConstRef.current?.dataset.visible === "false" ? "true" : "false";
+  };
+
   return (
     <motion.nav initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} className={style.nav}>
       <ul>
@@ -33,18 +48,17 @@ const Nav = () => {
             </svg>
           </button>
         </li>
-        <li>
-          Platform
-          <select
-            name="platformFilter"
-            id="platformFilter"
-            onChange={(e: React.ChangeEvent) => handleChangeFilterPlatform(e.target as HTMLSelectElement)}
-            value={filter.platform}
-          >
-            <option value="all">All</option>
-            <option value="frontendmentor">Front End Mentor</option>
-            <option value="personnal">Personnal</option>
-          </select>
+        <li className={style.liTags}>
+          <button onClick={displayTagsOption}>Tags</button>
+          <ol data-visible="false" ref={tagsConstRef}>
+            {getTags().map((tag, index) => {
+              return (
+                <li key={index} className={filter.tags.includes(tag) ? "selected" : ""} onClick={(e) => handleChangeFilterTags(tag)}>
+                  {tag}
+                </li>
+              );
+            })}
+          </ol>
         </li>
         <li>
           Type
@@ -62,7 +76,7 @@ const Nav = () => {
 
         <li className={style.search}>
           <input
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilter({ type: "all", platform: "all", date: "recent", search: e.target.value })}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilter({ type: "all", tags: [], date: "recent", search: e.target.value })}
             type="search"
             value={filter.search}
             name="searchFilter"

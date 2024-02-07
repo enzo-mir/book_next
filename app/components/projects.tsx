@@ -25,9 +25,15 @@ const Projects = () => {
     return orderedData;
   }
 
-  function filterByPlatform(array: projectsType) {
-    const orderedData = filter.platform !== "all" ? array.filter((project) => (project.platform === filter.platform ? true : false)) : array;
-    return orderedData;
+  function filterByTags(array: projectsType) {
+    if (filter.tags.length) {
+      return array.filter((arr) => {
+        const tagsFilter = filter.tags.length ? filter.tags.every((tag) => arr.tag.includes(tag)) : true;
+        return tagsFilter;
+      });
+    } else {
+      return array;
+    }
   }
 
   function filterBytype(array: projectsType) {
@@ -40,7 +46,7 @@ const Projects = () => {
 
   function filteredData() {
     if (!filter.search) {
-      return filterByDate(filterByPlatform(filterBytype(projects as projectsType)));
+      return filterByDate(filterByTags(filterBytype(projects as projectsType)));
     } else {
       return filterByDate(filterBySearch(filter.search));
     }

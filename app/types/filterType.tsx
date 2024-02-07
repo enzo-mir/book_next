@@ -1,6 +1,6 @@
 export type filterType = {
   date: "old" | "recent";
-  platform: "frontendmentor" | "personnal" | "all";
+  tags: Array<string>;
   type: "frontend" | "fullstack" | "all";
   search: string;
 };
