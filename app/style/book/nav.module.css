@@ -7,7 +7,7 @@
   background-color: var(--second-color);
   padding: 1em;
   border-radius: 0.5em;
-  height: 75px;
+  min-height: 75px;
 }
 
 .nav > ul {
@@ -54,7 +54,7 @@
   grid-template-rows: 75px 0%;
   max-height: 75px;
   transition: all 0.25s ease-out;
-  gap: 1em;
+  gap: 0.5em;
 }
 .liTags:has(ol[data-visible="true"]) {
   grid-template-rows: 75px max-content;
@@ -103,6 +103,7 @@
   z-index: 50;
   max-height: 40svh;
   overflow-y: auto;
+  box-shadow: 0 0 10px 0px var(--second-color);
 }
 
 .liTags > ol {
