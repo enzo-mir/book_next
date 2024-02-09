@@ -2,8 +2,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import styles from "../style/portfolio/portfolio.module.css";
 import { RxCross2 } from "react-icons/rx";
-import { LazyMotion, animate, inView, motion, useInView } from "framer-motion";
-import { log } from "console";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   function SkillsComponents() {

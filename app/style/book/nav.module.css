@@ -132,9 +132,11 @@
 .li_selected {
   background: var(--second-color);
 }
-.liTags > ol > li:hover {
-  background-color: var(--second-color);
-  cursor: pointer;
+@media (pointer: fine) {
+  .liTags > ol > li:hover {
+    background-color: var(--second-color);
+    cursor: pointer;
+  }
 }
 
 .search {
