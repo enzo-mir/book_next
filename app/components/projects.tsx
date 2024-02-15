@@ -7,10 +7,9 @@ import { filter_store } from "../data/filter_store";
 import FlipMove from "react-flip-move";
 import projects from "../data/data.json";
 import { projectsType } from "../types/projectsType";
-import { motion, stagger } from "framer-motion";
 
 const Projects = () => {
-  const [filter, setFilter] = filter_store((state) => [state.filter, state.setFilter]);
+  const filter = filter_store((state) => state.filter);
 
   function filterByDate(array: projectsType) {
     const orderedData: projectsType = array.sort((a, b) => {

@@ -126,9 +126,9 @@
     "webiste_url": "http://projectmanagment.uqkn2942.odns.fr/",
     "git_url": "https://github.com/enzo-mir/project_management_adonis.git",
     "title": "Project management adonis",
-    "description": "The app contains authentification, CSR (client side rendering) with inertia and state managment",
+    "description": "The app contains authentification, CSR (client side rendering) with inertia, JWT for reset password",
     "type": "fullstack",
-    "tag": ["React", "Inertia", "AdonisJs", "Typescript", "Zod", "zustand"],
+    "tag": ["React", "Inertia", "AdonisJs", "Typescript", "JWT"],
     "date": "Jan 7, 2024"
   },
   {
