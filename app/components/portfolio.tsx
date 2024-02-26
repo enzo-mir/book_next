@@ -57,7 +57,7 @@ const Portfolio = () => {
   }
 
   return (
-    <>
+    <motion.main initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.4 } }} exit={{ opacity: 0, y: -100 }}>
       <section className={styles.secctionHeader}>
         <h1>Hi there !</h1>
         <p>
@@ -117,7 +117,7 @@ const Portfolio = () => {
         <h1>Want a dev ?</h1>
         <button onClick={() => (window.location.href = "mailto:miraglioenzo93@gmail.com")}>Contact me !</button>
       </section>
-    </>
+    </motion.main>
   );
 };
 

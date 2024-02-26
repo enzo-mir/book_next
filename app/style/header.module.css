@@ -8,6 +8,7 @@
   gap: 2em;
   color: white;
   overflow: hidden;
+  max-width: 1920px;
 }
 
 .welcome {

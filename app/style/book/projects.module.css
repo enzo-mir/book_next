@@ -1,15 +1,25 @@
 .projectsContainer {
   color: white;
   display: grid;
-  align-items: center;
+  align-items: start;
+  max-width: 100%;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3em;
 }
-
+.projectsContainer > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2em;
+}
+.projectsContainer > ul > li {
+  width: 100%;
+}
 .card {
   display: grid;
-  grid-template-rows: 150px auto;
+  grid-template-rows: 175px auto;
   font-family: robot-light;
   height: 100%;
   width: 100%;
@@ -17,8 +27,9 @@
 }
 .headerCard {
   position: relative;
-  background: linear-gradient(hsla(0, 0%, 0%, 0.8), transparent);
-  border-radius: 0.25em 0.25em 0 0;
+  background: linear-gradient(hsla(0, 0%, 0%, 0.9), transparent);
+  border-radius: 0.5em 0.5em 0 0;
+  overflow: hidden;
 }
 .headerCard > h1 {
   padding: 0.3em 0.5em;
@@ -29,8 +40,8 @@
   min-width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0.5em 0.5em 0 0;
   z-index: -1;
+  border-radius: 9px 9px 0 0;
 }
 
 .bottomCard {

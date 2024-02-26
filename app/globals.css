@@ -120,7 +120,11 @@ body {
 }
 main {
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  justify-items: center;
+  justify-content: center;
+  max-width: 1920px;
   gap: 3em;
   width: 100%;
   padding-inline: 5%;

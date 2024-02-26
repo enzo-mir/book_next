@@ -62,7 +62,7 @@
     "title": "Calculator app",
     "description": "Theme switcher calculator app",
     "type": "frontend",
-    "tag": ["Html", "Css", "Js", "React", "styled-components"],
+    "tag": ["Html", "Js", "React", "styled-components"],
     "date": "Sep 15, 2023"
   },
   {
