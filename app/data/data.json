@@ -152,5 +152,15 @@
     "type": "fullstack",
     "tag": ["React", "Inertia", "AdonisJs", "Zod", "zustand", "styled-components"],
     "date": "Mar 6, 2024"
+  },
+  {
+    "id": 14,
+    "img_url": "/garden_party.png",
+    "webiste_url": "https://garden-party-draguignan.fr/",
+    "title": "Garden Party",
+    "description": "Card menu using QRcode French restaurant with admin pannel to edit it",
+    "type": "fullstack",
+    "tag": ["React", "Inertia", "AdonisJs", "Zod", "Api", "Css"],
+    "date": "Mar 13, 2024"
   }
 ]
