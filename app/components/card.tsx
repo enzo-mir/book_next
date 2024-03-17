@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "#styles/card.module.css";
 
 const Card = ({
   id,
@@ -8,7 +9,7 @@ const Card = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <article>
+    <article className={styles.card}>
       {children}
       <a href={`/portfolio/${id}`}>Learn More +</a>
     </article>

@@ -29,7 +29,7 @@ export default function Home() {
           <Image width={200} height={200} priority src={avatar} alt={"head of enzo miraglio in memojy"} />
         </aside>
       </section>
-      <section>
+      <section className={styles.bottom_section}>
         <div>
           <hr />
           <p className={workSans.className}>Let&apos;s discover my code !</p>
@@ -40,7 +40,7 @@ export default function Home() {
               <li key={obj.id}>
                 <Card id={obj.id}>
                   <Image fill priority alt={obj.title} src={obj.img_url} />
-                </Card> 
+                </Card>
               </li>
             );
           })}

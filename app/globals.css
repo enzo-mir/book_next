@@ -4,12 +4,19 @@
   margin: 0;
 }
 
+:root {
+  --primary_clr: #034990;
+}
+
 html,
 body {
   width: 100%;
+  height: 100%;
 }
 
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background-color: #e8e8e8;
 }
 ul {
