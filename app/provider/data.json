@@ -78,7 +78,7 @@
   },
   {
     "id": 7,
-    "img_url": "/api_country.jpg",
+    "img_url": "/api_country.png",
     "webiste_url": "https://enzo-mir.github.io/frontendmentorCH3/",
     "git_url": "https://github.com/enzo-mir/frontendmentorCH3.git",
     "title": "REST Countries API",

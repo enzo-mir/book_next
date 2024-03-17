@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import avatar from "./images/avatar_head.png";
 import { Work_Sans } from "next/font/google";
@@ -39,7 +38,7 @@ export default function Home() {
             return (
               <li key={obj.id}>
                 <Card id={obj.id}>
-                  <Image fill priority alt={obj.title} src={obj.img_url} />
+                  <Image fill alt={"projects represented"} src={obj.img_url} />
                 </Card>
               </li>
             );

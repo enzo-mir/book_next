@@ -11,7 +11,9 @@ const Card = ({
   return (
     <article className={styles.card}>
       {children}
-      <a href={`/portfolio/${id}`}>Learn More +</a>
+      <div>
+        <a href={`/portfolio/${id}`}>Learn More +</a>
+      </div>
     </article>
   );
 };

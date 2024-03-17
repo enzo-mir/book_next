@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from "#styles/footer.module.css"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
         <p>created by Enzo Miraglio, designed by <a href='#'>@elodiecarr</a></p>
         <p>©copyright 2024 - Enzo Miraglio</p>
     </footer>
