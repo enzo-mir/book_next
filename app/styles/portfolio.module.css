@@ -1,0 +1,65 @@
+.main {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 100%;
+  max-width: 100svw;
+  place-items: start start;
+  gap: 10%;
+  padding-inline-end: 0;
+}
+
+.main > h1 {
+  color: var(--primary_clr);
+}
+
+.section {
+  position: relative;
+  grid-template-columns: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 3em;
+  width: 100%;
+  overflow: auto;
+}
+
+.section > div:first-child {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  max-width: 100%;
+  align-items: center;
+  gap: 1em;
+  padding-inline-end: 1em;
+  color: var(--segondary-clr);
+}
+.section > div:first-child > hr {
+  background-color: var(--segondary-clr);
+  border-radius: 50px;
+  height: 25%;
+  border: none;
+}
+
+.section > div:last-child{
+  display: flex;
+  justify-content: start;
+  gap: 2em;
+  align-items: center;
+  width: max-content;
+}
+
+.article {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  gap: 1em;
+  width: clamp(200px, 25svw, 500px);
+  aspect-ratio: 3 / 2; 
+}
+
+.article > img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
