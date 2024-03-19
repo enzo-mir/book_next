@@ -1,0 +1,31 @@
+.header {
+  display: grid;
+  grid-template-columns: 30% 1fr 30%;
+  text-align: center;
+  align-items: center;
+  padding: 1em 10%;
+}
+
+.header > h1 {
+  font-size: clamp(25px, 3vw, 45px);
+}
+
+.nav {
+  display: grid;
+  place-items: center start;
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.nav > ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5em;
+  justify-content: end;
+  align-items: center;
+}
