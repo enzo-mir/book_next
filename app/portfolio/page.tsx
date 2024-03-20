@@ -1,22 +1,39 @@
 "use client";
-import React, { ElementRef, MouseEvent, MouseEventHandler, useRef } from "react";
+import React, { ElementRef, useRef } from "react";
 import styles from "#styles/portfolio.module.css";
 import ProjectCard from "#components/project_card";
+import { filterByAdonis, filterByApi, filterByHtml } from "../services/filter_projects";
 
 const Page = () => {
   const containerRef = useRef<ElementRef<"section">>(null);
   return (
     <main className={styles.main}>
-      <h1>Discover my projects</h1>
+      <section>
+        <h1>Discover my projects</h1>
+        <p>(Drag it !)</p>
+      </section>
       <section className={styles.section} ref={containerRef}>
         <div>
           <h1>html, css, js Vanillia</h1>
           <hr />
         </div>
-
-        <ProjectCard containerRef={containerRef} />
+        <ProjectCard containerRef={containerRef} filter={filterByHtml} />
       </section>
-      Bookmark landing page ok Job listings with filtering Bookmark landing page ok Job listings with filtering
+      <section className={styles.section} ref={containerRef}>
+        <div>
+          <h1>api, json</h1>
+          <hr />
+        </div>
+        <ProjectCard containerRef={containerRef} filter={filterByApi} />
+      </section>
+
+      <section className={styles.section} ref={containerRef}>
+        <div>
+          <h1>adonisjs, react, typescript</h1>
+          <hr />
+        </div>
+        <ProjectCard containerRef={containerRef} filter={filterByAdonis} />
+      </section>
     </main>
   );
 };

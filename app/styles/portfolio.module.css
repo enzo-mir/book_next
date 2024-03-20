@@ -1,18 +1,25 @@
 .main {
   position: relative;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 100%;
   max-width: 100svw;
-  place-items: start start;
-  gap: 10%;
+  place-items: center start;
+  gap: 5%;
   padding-inline-end: 0;
+  padding-top: 5%;
 }
 
-.main > h1 {
+.main > section:first-child {
+  display: grid;
+  gap: 0.5em;
+  font-size: x-large;
+}
+
+.main > section:first-child > h1 {
+  font-size: clamp(30px, 2.7vw, 50px);
   color: var(--primary_clr);
 }
-
 .section {
   position: relative;
   grid-template-columns: 100%;
@@ -21,6 +28,7 @@
   gap: 3em;
   width: 100%;
   overflow: hidden;
+  height: 60svh;
   padding-block: 2em;
 }
 
@@ -43,7 +51,7 @@
   scroll-behavior: smooth;
 }
 
-.section > div:last-child{
+.section > div:last-child {
   display: flex;
   justify-content: start;
   gap: 2em;
@@ -51,7 +59,9 @@
   align-items: center;
   width: max-content;
 }
-
+.section > div:last-child:hover {
+  cursor: grab;
+}
 .article {
   position: relative;
   display: grid;
@@ -59,11 +69,24 @@
   height: 100%;
   gap: 1em;
   width: clamp(200px, 25svw, 500px);
-  aspect-ratio: 3 / 2; 
+  aspect-ratio: 3 / 2;
 }
 
 .article > img {
   position: relative;
   height: 100%;
   width: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+}
+.article > div {
+  display: flex;
+  justify-content: space-between;
+}
+.article > div > a {
+  display: grid;
+  justify-self: end;
+  border: 2px solid black;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
 }
