@@ -1,0 +1,118 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  font-size: larger;
+  height: fit-content;
+}
+
+.article {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 2em;
+  width: 30svw;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.aside {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 2em;
+  height: fit-content;
+  padding-top: 1em;
+  align-self: start;
+}
+
+.main section {
+  height: fit-content;
+}
+
+.header_section {
+  display: grid;
+  gap: 1.5em;
+  max-width: 500px;
+}
+.cta_section {
+  display: flex;
+  gap: 1em;
+}
+.cta_section > a {
+  position: relative;
+  color: var(--primary_clr);
+}
+
+.cta_section > a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -15px;
+  height: 3px;
+  background-color: var(--primary_clr);
+  width: 100%;
+  border-radius: 50px;
+  transition: all 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+  opacity: 0;
+}
+.cta_section > a:hover {
+  cursor: pointer;
+}
+
+.cta_section > a:hover::after {
+  bottom: -5px;
+  opacity: 1;
+}
+
+.img_section {
+  display: grid;
+  gap: 0.5em;
+}
+.img_section > img {
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  object-position: top;
+  border-radius: 1em;
+}
+.img_section > span {
+  padding-inline-start: 1em;
+  font-size: small;
+  height: 1em;
+}
+
+.tags_section {
+  display: grid;
+  gap: 2em;
+}
+
+.tags_section > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1em;
+  color: var(--segondary-clr);
+}
+
+.tags_section > div > hr {
+  height: 25%;
+  border: none;
+  background-color: var(--segondary-clr);
+  border-radius: 20px;
+}
+
+.tags_section > ul {
+  display: flex;
+  gap: 1em;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.tags_section > ul > li {
+  border-radius: 20px;
+  padding: 0.25em 1em;
+  color: white;
+  background-color: var(--segondary-clr);
+}

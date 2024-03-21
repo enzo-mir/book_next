@@ -5,7 +5,7 @@
     "webiste_url": "https://enzo-mir.github.io/tip-calculator-app-main/",
     "git_url": "https://github.com/enzo-mir/tip-calculator-app-main.git",
     "title": "Tip calculator app",
-    "description": "This app is made for claculate total tips and tip per person with default bill, custom tip and custom number of people",
+    "description": "This app is made for calculate total tips and tip per person with default bill, custom tip and custom number of people",
     "type": "frontend",
     "tag": ["Html", "Css", "Js"],
     "date": "Dec 11, 2023"

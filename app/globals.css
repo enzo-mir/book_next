@@ -21,6 +21,7 @@ main {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  align-items: center;
   background-color: #e8e8e8;
 }
 ul {

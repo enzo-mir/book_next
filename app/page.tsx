@@ -1,11 +1,9 @@
 import Image from "next/image";
 import avatar from "./images/avatar_head.png";
-import { Work_Sans } from "next/font/google";
 import Card from "#components/card";
 import data from "./provider/data.json";
 import styles from "#styles/main.module.css";
 
-const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 export default function Home() {
   function getRandomObject() {
     for (let i = data.length - 1; i > 0; i--) {
@@ -31,7 +29,7 @@ export default function Home() {
       <section className={styles.bottom_section}>
         <div>
           <hr />
-          <p className={workSans.className}>Let&apos;s discover my code !</p>
+          <p>Let&apos;s discover my code !</p>
         </div>
         <ul className={styles.galery}>
           {randomObject.map((obj) => {

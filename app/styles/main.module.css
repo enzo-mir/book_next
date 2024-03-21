@@ -38,11 +38,12 @@
   gap: 1em;
   align-items: center;
   font-size: clamp(16px, 2.5vw, 25px);
+  color: var(--segondary-clr);
 }
 
 .bottom_section > div > hr {
   border: none;
-  background-color: var(--primary_clr);
+  background-color: var(--segondary-clr);
   height: 25%;
   border-radius: 10px;
 }
