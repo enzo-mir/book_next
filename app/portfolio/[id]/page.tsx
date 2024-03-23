@@ -45,7 +45,7 @@ function PortfolioItem() {
           )}
           {project.webiste_url ? (
             <Link href={project.webiste_url} target="_blank">
-              Got to website
+              Go to website
             </Link>
           ) : (
             <p>Private website</p>

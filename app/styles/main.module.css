@@ -15,6 +15,10 @@
   height: 100%;
 }
 
+.header_section > aside {
+  max-height: 100%;
+}
+
 .header_section > h1 {
   font-size: clamp(25px, 2.7vw, 40px);
 }
@@ -60,4 +64,28 @@
 .galery > li {
   list-style-type: none;
   height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .galery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  .galery > li:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .galery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .galery > li:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header_section > aside {
+    display: none;
+  }
 }

@@ -8,36 +8,48 @@ const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
-        <ul>
+    <>
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <ul>
+            <li>
+              <a href="/portfolio" className={workSans.className}>
+                PORTFOLIO
+              </a>
+            </li>
+            <li>
+              <a href="/about" className={workSans.className}>
+                ABOUT ME
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <h1>miraglio enzo</h1>
+        <ul className={styles.socials}>
           <li>
-            <a href="/portfolio" className={workSans.className}>PORTFOLIO</a>
+            <a href="#">
+              <GithubIcon />
+            </a>
           </li>
           <li>
-            <a href="/about" className={workSans.className}>ABOUT ME</a>
+            <a href="">
+              <FrontEndMentor />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <SendEmail />
+            </a>
           </li>
         </ul>
-      </nav>
-      <h1>miraglio enzo</h1>
-      <ul className={styles.socials}>
-        <li>
-          <a href="#">
-            <GithubIcon />
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <FrontEndMentor />
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <SendEmail />
-          </a>
-        </li>
-      </ul>
-    </header>
+        <label htmlFor="check" className={styles.burger}>
+          <input type="checkbox" id="check" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </header>
+    </>
   );
 };
 

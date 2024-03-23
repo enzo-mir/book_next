@@ -14,7 +14,8 @@ body {
   width: 100%;
   height: 100%;
 }
-main {
+main,
+header {
   padding-inline: 10%;
 }
 
@@ -30,4 +31,17 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+  main,
+  header {
+    padding-inline: 2em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    grid-template-rows: 1fr auto;
+  }
 }
