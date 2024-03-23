@@ -103,7 +103,6 @@
 @media (pointer: coarse) {
   .section {
     overflow-x: auto;
-
   }
 }
 @media screen and (max-width: 1400px) {

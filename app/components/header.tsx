@@ -4,6 +4,7 @@ import FrontEndMentor from "../images/front_end_mentor.svg";
 import SendEmail from "../images/send_email.svg";
 import styles from "#styles/header.module.css";
 import { Work_Sans } from "next/font/google";
+import Link from "next/link";
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
 const Header = () => {
@@ -24,22 +25,24 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <h1>miraglio enzo</h1>
+        <h1>
+          <Link href="/">miraglio enzo</Link>
+        </h1>
         <ul className={styles.socials}>
           <li>
-            <a href="#">
+            <Link href="https://github.com/enzo-mir" target="_blank">
               <GithubIcon />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="">
+            <Link href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
               <FrontEndMentor />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="">
+            <Link href="mailto:miraglioenzo93@gmail.com" target="_blank">
               <SendEmail />
-            </a>
+            </Link>
           </li>
         </ul>
         <label htmlFor="check" className={styles.burger}>

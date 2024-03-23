@@ -77,9 +77,15 @@
 }
 
 @media screen and (max-width: 650px) {
+  .main {
+    padding-block-start: calc(50px + 3em);
+    grid-template-rows: 30% 0.7fr;
+    width: 100%;
+  }
   .galery {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .galery > li:nth-child(3) {
     display: none;
   }

@@ -16,7 +16,7 @@
   place-items: center start;
 }
 .nav a {
-  font-size: clamp(18px, 2vw, 22px);
+  font-size: clamp(15px, 2vw, 22px);
 }
 
 .nav > ul {
@@ -96,13 +96,15 @@
   .header {
     position: fixed;
     grid-template-columns: 1fr;
-    place-items: center;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    justify-items: center;
     top: 0px;
     gap: 1em;
     height: calc(50px + 1.5em);
     padding-block: calc(50px + 2em) 0;
     overflow: hidden;
-    background-color: white;
+    background: linear-gradient(white 25%, transparent);
     width: 100%;
     transition: all 0.3s ease-out;
   }
@@ -111,8 +113,12 @@
     top: 1em;
   }
   .header:has(label > input[type="checkbox"]:checked) {
-    height: 250px;
+    height: 100%;
     min-height: max-content;
     padding-block: calc(50px + 3em) 0;
+  }
+
+  .nav a {
+    font-size: 1.2em;
   }
 }

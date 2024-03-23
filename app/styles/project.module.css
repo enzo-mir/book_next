@@ -116,3 +116,41 @@
   color: white;
   background-color: var(--segondary-clr);
 }
+
+@media screen and (max-width: 800px) {
+  .main {
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+    height: max-content;
+  }
+
+  .main > aside {
+    gap: 0.5em;
+  }
+
+  .header_section {
+    gap: 0.5em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    gap: 1em;
+  }
+  .tags_section {
+    gap: 0.5em;
+  }
+  .tags_section > ul > li {
+    font-size: smaller;
+  }
+
+  .tags_section > ul {
+    gap: 0.25em;
+  }
+
+  .article {
+    min-width: 300px;
+    gap: 1em;
+  }
+}

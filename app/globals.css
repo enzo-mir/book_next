@@ -43,5 +43,7 @@ a {
 @media screen and (max-width: 650px) {
   body {
     grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
   }
 }

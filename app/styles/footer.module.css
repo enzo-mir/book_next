@@ -1,6 +1,13 @@
 .footer {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    font-size: smaller;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  font-size: smaller;
+  padding-block: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    font-size: x-small;
+  }
 }
