@@ -50,7 +50,9 @@
   border: none;
   scroll-behavior: smooth;
 }
-
+.section > div:first-child > h1 {
+  font-size: clamp(25px, 2vw, 30px);
+}
 .section > div:last-child {
   display: flex;
   justify-content: start;
@@ -111,6 +113,9 @@
   }
 }
 @media screen and (max-width: 650px) {
+  .section {
+    overflow-x: auto;
+  }
   .main {
     padding-block-start: calc(50px + 3em);
     gap: 2em;

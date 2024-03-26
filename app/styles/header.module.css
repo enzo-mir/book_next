@@ -112,10 +112,19 @@
     position: absolute;
     top: 1em;
   }
+  .nav,
+  .socials {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
   .header:has(label > input[type="checkbox"]:checked) {
     height: 100%;
     min-height: max-content;
     padding-block: calc(50px + 3em) 0;
+  }
+  .header:has(label > input[type="checkbox"]:checked) > nav,
+  .header:has(label > input[type="checkbox"]:checked) > ul {
+    opacity: 1;
   }
 
   .nav a {

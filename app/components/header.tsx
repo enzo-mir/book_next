@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import GithubIcon from "../images/github.svg";
 import FrontEndMentor from "../images/front_end_mentor.svg";
 import SendEmail from "../images/send_email.svg";
@@ -8,9 +9,15 @@ import Link from "next/link";
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
 const Header = () => {
+  const [headerOpen, setHeaderOpen] = useState<boolean>(false);
   return (
     <>
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        onClick={() => {
+          setHeaderOpen(false);
+        }}
+      >
         <nav className={styles.nav}>
           <ul>
             <li>
@@ -46,7 +53,7 @@ const Header = () => {
           </li>
         </ul>
         <label htmlFor="check" className={styles.burger}>
-          <input type="checkbox" id="check" />
+          <input onChange={(e) => setHeaderOpen(e.target.checked)} checked={headerOpen} type="checkbox" id="check" />
           <span></span>
           <span></span>
           <span></span>

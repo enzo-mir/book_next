@@ -3,10 +3,10 @@ import { ElementRef, MouseEvent } from "react";
 export const handleDragStart = (
   event: MouseEvent,
   setPosition: (value: number) => void,
-  position:number,
+  position: number,
   setDistortion: (value: number) => void,
   sliderRef: React.RefObject<HTMLDivElement>,
-  containerRef: React.RefObject<ElementRef<"section">> 
+  containerRef: React.RefObject<ElementRef<"section">>
 ) => {
   event.preventDefault();
   const maxDrag = -(sliderRef.current!.offsetWidth - containerRef.current!.offsetWidth) - 16;
