@@ -12,7 +12,7 @@ export const handleDragStart = (
   const maxDrag = -(sliderRef.current!.offsetWidth - containerRef.current!.offsetWidth) - 16;
   const startX = event.clientX;
   const startLeft = position;
-
+  
   const handleDragMove = (moveEvent: MouseEvent) => {
     const deltaX = moveEvent.clientX - startX;
     if (startLeft + deltaX < maxDrag) {
