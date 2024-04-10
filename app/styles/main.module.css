@@ -20,9 +20,13 @@
 }
 
 .header_section > h1 {
+  display: grid;
   font-size: clamp(25px, 2.7vw, 40px);
 }
-.header_section > h1 > strong {
+.header_section > h1 > span {
+  overflow: hidden;
+}
+.header_section > h1 > span:last-child {
   color: var(--primary_clr);
 }
 
@@ -54,7 +58,7 @@
 
 .galery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 15%));
+  grid-template-columns: repeat(4, minmax(200px, 20%));
   justify-content: space-between;
   align-items: center;
   width: 100%;

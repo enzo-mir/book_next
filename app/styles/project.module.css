@@ -121,12 +121,15 @@
   .main {
     flex-direction: column-reverse;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     height: max-content;
+    gap: 1em;
   }
 
   .main > aside {
     gap: 0.5em;
+    align-self: center;
+    width: 100%;
   }
 
   .header_section {
@@ -136,7 +139,7 @@
 
 @media screen and (max-width: 650px) {
   .main {
-    gap: 1em;
+    gap: 5vh;
   }
   .tags_section {
     gap: 0.5em;
@@ -152,5 +155,11 @@
   .article {
     min-width: 300px;
     gap: 1em;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .main {
+    padding-block: 3em;
   }
 }

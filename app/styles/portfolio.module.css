@@ -27,7 +27,8 @@
   grid-template-rows: auto 1fr;
   gap: 3em;
   width: 100%;
-  overflow: hidden;
+  overflow: auto hidden;
+
   height: 60svh;
   padding-block: 2em;
 }
@@ -48,7 +49,6 @@
   border-radius: 50px;
   height: 25%;
   border: none;
-  scroll-behavior: smooth;
 }
 .section > div:first-child > h1 {
   font-size: clamp(25px, 2vw, 30px);
@@ -115,15 +115,14 @@
 @media screen and (max-width: 650px) {
   .section {
     overflow-x: auto;
+    padding-inline: 2em;
+    position: relative;
+    height: max-content;
   }
   .main {
     padding-block-start: calc(50px + 3em);
     gap: 2em;
     grid-template-rows: auto 1fr 1fr 1fr;
-  }
-  .section {
-    position: relative;
-    height: max-content;
   }
 
   .section > div:last-child {
