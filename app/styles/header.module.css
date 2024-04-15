@@ -16,7 +16,30 @@
   place-items: center start;
 }
 .nav a {
+  position: relative;
   font-size: clamp(15px, 2vw, 22px);
+}
+.nav a::after {
+  position: absolute;
+  content: "";
+  transition: all 0.3s ease-out;
+  bottom: 0px;
+  transform: translate(-50%, 15px);
+  left: 50%;
+  width: 100%;
+  opacity: 0;
+  height: 2px;
+  background-color: black;
+  border-radius: 10px;
+}
+.nav a[aria-current="false"]:hover::after {
+  width: 90%;
+  transform: translate(-50%, 10px);
+  opacity: 1;
+}
+.nav a[aria-current="true"]::after {
+  transform: translate(-50%, 10px);
+  opacity: 1;
 }
 
 .nav > ul {

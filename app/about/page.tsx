@@ -4,6 +4,7 @@ import timelineDatas from "../provider/timeline.json";
 import styles from "#styles/about.module.css";
 import Timeline from "#components/timeline";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Page = () => {
   const { ref, inView } = useInView({
@@ -11,7 +12,7 @@ const Page = () => {
   });
   return (
     <main className={styles.main} ref={ref}>
-      <h1>Discover me</h1>
+      <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>Discover me</motion.h1>
 
       <section className={styles.timeline_section}>
         <hr data-visible={inView} />

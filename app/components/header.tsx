@@ -6,10 +6,13 @@ import SendEmail from "../images/send_email.svg";
 import styles from "#styles/header.module.css";
 import { Work_Sans } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
 const Header = () => {
   const checkRef = useRef<ElementRef<"input">>(null);
+  const pathName = usePathname().replace("/", "");
+
   return (
     <>
       <header
@@ -23,12 +26,12 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <a href="/portfolio" className={workSans.className}>
+              <a href="/portfolio" aria-current={pathName === "portfolio" ? true : false} className={workSans.className}>
                 PORTFOLIO
               </a>
             </li>
             <li>
-              <a href="/about" className={workSans.className}>
+              <a href="/about" aria-current={pathName === "about" ? true : false} className={workSans.className}>
                 ABOUT ME
               </a>
             </li>

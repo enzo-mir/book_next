@@ -12,11 +12,11 @@ function PortfolioItem() {
   const project = data[id];
 
   return (
-    <main className={`${workSans.className + " " + styles.main}`}>
+    <main className={styles.main}>
       <article className={styles.article}>
         <section className={styles.img_section}>
-          <span>{project.date}</span>
-          <Image width={300} height={200} alt="" src={project.img_url} />
+          <span className={workSans.className}>{project.date}</span>
+          <Image fill alt="" src={project.img_url} />
         </section>
         <section className={styles.tags_section}>
           <div>
@@ -25,7 +25,7 @@ function PortfolioItem() {
           </div>
           <ul>
             {project.tag.map((tag, id) => {
-              return <li key={id}>{tag}</li>;
+              return <li key={id} className={workSans.className}>{tag}</li>;
             })}
           </ul>
         </section>
@@ -33,18 +33,18 @@ function PortfolioItem() {
       <aside className={styles.aside}>
         <section className={styles.header_section}>
           <h1>{project.title}</h1>
-          <p>{project.description}</p>
+          <p className={workSans.className}>{project.description}</p>
         </section>
         <section className={styles.cta_section}>
           {project.git_url ? (
-            <Link href={project.git_url} target="_blank">
+            <Link href={project.git_url} target="_blank" className={workSans.className}>
               See Github
             </Link>
           ) : (
             <p>Private repo</p>
           )}
           {project.webiste_url ? (
-            <Link href={project.webiste_url} target="_blank">
+            <Link href={project.webiste_url} target="_blank" className={workSans.className}>
               Go to website
             </Link>
           ) : (

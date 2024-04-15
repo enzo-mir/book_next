@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "#styles/card.module.css";
-
+import { motion } from "framer-motion";
 const Card = ({
   id,
   children,
@@ -9,12 +9,12 @@ const Card = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <article className={styles.card}>
+    <motion.article className={styles.card} initial={{ y: -20, opacity: 0 }} animate={{ y: -0, opacity: 1, transition: { duration: 0.5 } }}>
       {children}
       <div>
         <a href={`/portfolio/${id}`}>Learn More +</a>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

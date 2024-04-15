@@ -1,42 +1,42 @@
 [
   {
     "id": 0,
-    "title": "The begining",
+    "title": "the begining",
     "description": "This is the first time I code, it was C language with Openclassroom",
     "img": "/start.png",
     "date": "2019"
   },
   {
     "id": 1,
-    "title": "Dev web",
+    "title": "dev web",
     "description": "Introduce in the world of world wide web with basics Html and Css learnt with MDN and W3School",
     "img": "/dev.png",
     "date": "2020"
   },
   {
     "id": 2,
-    "title": "Start fundamentals",
+    "title": "start fundamentals",
     "description": "Started my first online formation with Studi and start some Js",
     "img": "/fundamental.png",
     "date": "2022"
   },
   {
     "id": 3,
-    "title": "Getting deeper",
+    "title": "getting deeper",
     "description": "Choose a front-end framework which is react/vite (with his ecosystem)",
     "img": "/deeper.png",
     "date": "2023"
   },
   {
     "id": 4,
-    "title": "Typesafe",
+    "title": "typesafe",
     "description": "Discover typescript, zod and now I have to use these two fundamentals in all of my projects",
     "img": "/type.png",
     "date": "2024"
   },
   {
     "id": 5,
-    "title": "Fullstack",
+    "title": "fullstack",
     "description": "Try to learn some of back-end dev with express, fastify and adonisJs and have the correct methods of server dev",
     "img": "/fullstack.png",
     "date": "2024"

@@ -1,9 +1,11 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 10svh;
+  padding-block: 3em 10em;
 }
 
 .main > h1 {
@@ -18,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .timeline_section > hr {
@@ -44,7 +47,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
   gap: 5svh;
 }
 
@@ -53,9 +57,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 2em;
+  gap: 1em;
   font-size: larger;
-  width: 500px;
+  width: 450px;
   color: white;
   transition: all 0.5s ease-out;
 }
@@ -105,4 +109,47 @@
   padding: 0.5em;
   border: 2px solid var(--primary_clr);
   align-self: center;
+}
+
+@media screen and (max-width: 950px) {
+  .timeline_section > div {
+    position: relative;
+    overflow-x: hidden;
+    align-items: flex-start;
+    padding-inline: 1em;
+    width: 80svw;
+  }
+  .timeline_section > hr {
+    left: 0;
+  }
+  .article:nth-child(even) {
+    transform: translateX(calc(60% - 30px));
+    opacity: 0;
+  }
+
+  .timeline_section article[data-visible="true"]:nth-child(odd),
+  .timeline_section article[data-visible="true"]:nth-child(even) {
+    transform: translateX(0px);
+    opacity: 1;
+    height: 100%;
+  }
+
+
+  .main {
+    padding-block: 5em 10em;
+    padding-inline: 10%;
+  }
+
+  .timeline_section article:nth-child(odd),
+  .timeline_section article:nth-child(even) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .article > img {
+    align-self: flex-start;
+  }
+  .article > aside {
+    width: 100%;
+  }
 }

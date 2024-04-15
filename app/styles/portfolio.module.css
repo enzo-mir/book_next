@@ -27,7 +27,7 @@
   grid-template-rows: auto 1fr;
   gap: 3em;
   width: 100%;
-  overflow: auto hidden;
+  overflow: hidden;
 
   height: 60svh;
   padding-block: 2em;
@@ -56,7 +56,7 @@
 .section > div:last-child {
   display: flex;
   justify-content: start;
-  gap: 2em;
+  gap: clamp(2em, 3svw, 3svw);
   transition: all 0.5s ease-out;
   align-items: center;
   width: max-content;
@@ -75,16 +75,19 @@
 }
 
 .article > img {
-  position: relative;
+  position: relative !important;
   height: 100%;
   width: 100%;
   border-radius: 1em;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 }
 .article > div {
   display: flex;
   justify-content: space-between;
+}
+.article > div > h2 {
+  font-size: clamp(18px, 2vw, 22px);
 }
 .article > div > a {
   display: grid;
