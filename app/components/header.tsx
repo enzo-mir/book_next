@@ -12,14 +12,14 @@ const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 const Header = () => {
   const checkRef = useRef<ElementRef<"input">>(null);
   const pathName = usePathname().replace("/", "");
-  function headerVisible(e: MouseEvent | TouchEvent) {
+  function headerVisible(e: MouseEvent) {
     if (checkRef.current) {
       e.target === e.currentTarget ? (checkRef.current.checked = false) : null;
     }
   }
   return (
     <>
-      <header className={styles.header} onTouchStart={headerVisible} onMouseDown={headerVisible}>
+      <header className={styles.header} onPointerDown={headerVisible} onMouseDown={headerVisible}>
         <nav className={styles.nav}>
           <ul>
             <li>
