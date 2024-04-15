@@ -1,5 +1,5 @@
 "use client";
-import React, { ElementRef, useRef, useState } from "react";
+import React, { ElementRef, MouseEvent, TouchEventHandler, useRef, useState } from "react";
 import GithubIcon from "../images/github.svg";
 import FrontEndMentor from "../images/front_end_mentor.svg";
 import SendEmail from "../images/send_email.svg";
@@ -12,17 +12,14 @@ const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 const Header = () => {
   const checkRef = useRef<ElementRef<"input">>(null);
   const pathName = usePathname().replace("/", "");
-
+  function headerVisible(e: MouseEvent | TouchEvent) {
+    if (checkRef.current) {
+      e.target === e.currentTarget ? (checkRef.current.checked = false) : null;
+    }
+  }
   return (
     <>
-      <header
-        className={styles.header}
-        onClick={(e) => {
-          if (checkRef.current) {
-            e.target === e.currentTarget ? (checkRef.current.checked = false) : null;
-          }
-        }}
-      >
+      <header className={styles.header} onTouchStart={headerVisible} onMouseDown={headerVisible}>
         <nav className={styles.nav}>
           <ul>
             <li>
