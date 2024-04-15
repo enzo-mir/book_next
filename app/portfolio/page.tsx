@@ -4,7 +4,9 @@ import styles from "#styles/portfolio.module.css";
 import ProjectCard from "#components/project_card";
 import { filterByAdonis, filterByApi, filterByHtml } from "../services/filter_projects";
 import { motion } from "framer-motion";
+import { Work_Sans } from "next/font/google";
 
+const workSans = Work_Sans({ subsets: ["latin"], weight: "600" });
 const Page = () => {
   const containerRef = useRef<ElementRef<"section">>(null);
   return (
@@ -13,8 +15,8 @@ const Page = () => {
         <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
           Discover my projects
         </motion.h1>
-        <motion.p initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
-          (Drag it !)
+        <motion.p className={workSans.className} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+          Drag it !
         </motion.p>
       </section>
       <section className={styles.section} ref={containerRef}>

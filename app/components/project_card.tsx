@@ -26,7 +26,7 @@ const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<E
           <motion.article key={project.id} className={styles.article} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
             <div>
               <h2 className={workSans.className}>{project.title}</h2>
-              <Link href={`/portfolio/${project.id}`}>Leanr more +</Link>
+              <Link href={`/portfolio/${project.id}`}>Learn More +</Link>
             </div>
             <Image fill objectFit="cover" alt="projects" src={project.img_url} />
           </motion.article>

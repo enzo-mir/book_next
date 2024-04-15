@@ -12,9 +12,9 @@
 
 .main > section:first-child {
   display: grid;
-  gap: 0.5em;
   font-size: x-large;
 }
+
 
 .main > section:first-child > h1 {
   font-size: clamp(30px, 2.7vw, 50px);
@@ -95,14 +95,14 @@
   padding: 0.25em 0.5em;
   border-radius: 5px;
   transition: all 0.2s ease-out;
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
 }
 
 .article > div > a:hover,
 .article > div > a:focus-visible {
   scale: 1.1;
-  translate: 0px -5px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  translate: 0px -2px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 @media (pointer: coarse) {
   .section {

@@ -38,6 +38,10 @@ a {
   header {
     padding-inline: 2em;
   }
+  h1,
+  h2 {
+    font-weight: lighter;
+  }
 }
 
 @media screen and (max-width: 650px) {

@@ -12,9 +12,9 @@ export const handleDragStart = (
   const maxDrag = -(sliderRef.current!.offsetWidth - containerRef.current!.offsetWidth) - 16;
   const startX = event.clientX;
   const startLeft = position;
-  
-  const handleDragMove = (moveEvent: MouseEvent) => {
-    const deltaX = moveEvent.clientX - startX;
+
+  const handleDragMove = (moveEvent: Event) => {
+    const deltaX = (moveEvent as unknown as MouseEvent).clientX - startX;
     if (startLeft + deltaX < maxDrag) {
       setPosition(maxDrag);
       setDistortion(0);
