@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import avatar from "./images/avatar_head.png";
 import Card from "#components/card";
 import data from "./provider/data.json";
 import styles from "#styles/main.module.css";
@@ -26,9 +25,7 @@ export default function Home() {
           </motion.span>
         </h1>
 
-        <aside>
-          <Image width={200} height={200} priority src={avatar} alt={"head of enzo miraglio in memojy"} />
-        </aside>
+        <aside></aside>
       </section>
       <section className={styles.bottom_section}>
         <div>
