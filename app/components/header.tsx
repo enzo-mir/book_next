@@ -35,7 +35,7 @@ const Header = () => {
           </ul>
         </nav>
         <h1>
-          <Link href="/">miraglio enzo</Link>
+          <a href="/">miraglio enzo</a>
         </h1>
         <ul className={styles.socials}>
           <li>

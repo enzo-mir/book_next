@@ -42,7 +42,7 @@ export default function Home() {
             return (
               <motion.li key={obj.id} initial={{ y: -20, opacity: 0 }} animate={{ y: -0, opacity: 1 }}>
                 <Card id={obj.id}>
-                  <Image fill alt={"projects represented"} src={obj.img_url} priority/>
+                  <Image fill alt={"projects represented"} src={obj.img_url} priority />
                 </Card>
               </motion.li>
             );

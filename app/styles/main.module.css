@@ -18,7 +18,9 @@
 .header_section > aside {
   max-height: 100%;
 }
-
+.header_section > aside > img {
+  user-select: none;
+}
 .header_section > h1 {
   display: grid;
   font-size: clamp(25px, 2.7vw, 40px);
@@ -95,7 +97,6 @@
     grid-template-rows: 30% 0.7fr;
     width: 100%;
   }
-
 }
 @media screen and (max-width: 500px) {
   .header_section > aside {
