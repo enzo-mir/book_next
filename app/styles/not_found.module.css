@@ -17,14 +17,13 @@
   transform: translate(-50%, 15px);
   left: 50%;
   width: 100%;
-  opacity: 0;
   height: 2px;
   background-color: black;
   border-radius: 10px;
 }
 
-.main > a:hover::after {
+.main > a:hover::after,
+.main > a:focus-visible::after {
   width: 90%;
   transform: translate(-50%, 10px);
-  opacity: 1;
 }

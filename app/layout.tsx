@@ -3,6 +3,7 @@ import Nimpkish_font from "next/font/local";
 import "./globals.css";
 import Header from "#components/header";
 import Footer from "#components/footer";
+import Inner from "./inner";
 
 const Nimpkish = Nimpkish_font({ src: "./fonts/ED_Nimpkish-Regular.otf" });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={Nimpkish.className}>
         <Header />
-        {children}
+        <Inner>{children}</Inner>
         <Footer />
       </body>
     </html>
