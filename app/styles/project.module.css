@@ -18,10 +18,12 @@
 }
 
 .aside {
-  display: grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   gap: 2em;
-  height: fit-content;
+  height: 100%;
   padding-top: 1em;
   align-self: start;
 }
@@ -141,6 +143,7 @@
 @media screen and (max-width: 650px) {
   .main {
     gap: 5vh;
+    padding-block: 3em;
   }
   .tags_section {
     gap: 0.5em;
