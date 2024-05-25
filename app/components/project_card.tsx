@@ -28,7 +28,7 @@ const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<E
               <h2 className={workSans.className}>{project.title}</h2>
               <Link href={`/portfolio/${project.id}`}>Learn More +</Link>
             </div>
-            <Image fill objectFit="cover" alt="projects" src={project.img_url} />
+            <Image fill objectFit="cover" alt="projects" src={project.img_url} fetchPriority="high" />
           </motion.article>
         );
       })}

@@ -17,6 +17,16 @@ const Header = () => {
       e.target === e.currentTarget ? (checkRef.current.checked = false) : null;
     }
   }
+  function mouseLeave(span: HTMLSpanElement) {
+    span.style.opacity = "0";
+    span.style.left = `50%`;
+  }
+  function mouseEnterLink(e: MouseEvent<HTMLElement>, span: HTMLSpanElement) {
+    const positionX = e.clientX - e.currentTarget.getBoundingClientRect().x;
+    e.currentTarget.addEventListener("pointerleave", () => mouseLeave(span));
+    span.style.left = `${positionX}px`;
+    span.style.opacity = "1";
+  }
   return (
     <>
       <header className={styles.header} onPointerDown={headerVisible} onMouseDown={headerVisible}>
@@ -38,18 +48,30 @@ const Header = () => {
           <a href="/">miraglio enzo</a>
         </h1>
         <ul className={styles.socials}>
-          <li>
-            <Link href="https://github.com/enzo-mir" target="_blank">
+          <li
+            onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+            onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+          >
+            <span>github</span>
+            <Link rel="external" href="https://github.com/enzo-mir" target="_blank">
               <GithubIcon />
             </Link>
           </li>
-          <li>
-            <Link href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
+          <li
+            onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+            onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+          >
+            <span>frontendmentor</span>
+            <Link rel="external" href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
               <FrontEndMentor />
             </Link>
           </li>
-          <li>
-            <Link href="mailto:miraglioenzo93@gmail.com" target="_blank">
+          <li
+            onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+            onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+          >
+            <span>mail</span>
+            <Link rel="external" href="mailto:miraglioenzo93@gmail.com" target="_blank">
               <SendEmail />
             </Link>
           </li>

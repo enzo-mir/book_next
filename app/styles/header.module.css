@@ -55,7 +55,28 @@
   justify-content: end;
   align-items: center;
 }
+.socials > li {
+  position: relative;
+}
 
+.socials a {
+  display: block;
+  height: 100%;
+}
+.socials > li:hover > span {
+  transform: translate(-50%, 0px);
+}
+.socials > li > span {
+  position: absolute;
+  transition: all 0.2s ease-out;
+  transform: translate(-50%, 20px);
+  left: 50%;
+  top: 100%;
+  width: max-content;
+  opacity: 0;
+  aspect-ratio: 1 / 1;
+  z-index: -1;
+}
 .burger {
   position: absolute;
   top: 1em;
