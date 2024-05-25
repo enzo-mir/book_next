@@ -15,7 +15,6 @@
   font-size: x-large;
 }
 
-
 .main > section:first-child > h1 {
   font-size: clamp(30px, 2.7vw, 50px);
   color: var(--primary_clr);
@@ -100,7 +99,6 @@
 
 .article > div > a:hover,
 .article > div > a:focus-visible {
-  scale: 1.1;
   translate: 0px -2px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -158,5 +156,8 @@
   }
   .section > div:first-child > hr {
     height: 5px;
+  }
+  .article {
+    min-width: 100%;
   }
 }
