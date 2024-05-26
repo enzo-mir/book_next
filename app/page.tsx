@@ -4,15 +4,28 @@ import Card from "#components/card";
 import data from "./provider/data.json";
 import styles from "#styles/main.module.css";
 import { motion } from "framer-motion";
-export default function Home() {
-  function shuffleArray() {
-    for (let i = data.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [data[i], data[j]] = [data[j], data[i]];
-    }
-    return data.slice(0, 4);
+import { useEffect, useState } from "react";
+
+function shuffleArray(array: typeof data): typeof data {
+  const newArray = array.slice();
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
   }
-  const randomObject = shuffleArray();
+  return newArray;
+}
+export default function Page() {
+  const [array, setArray] = useState<typeof data>(data);
+
+  const handleShuffle = () => {
+    const shuffledArray = shuffleArray(array);
+    setArray(shuffledArray.slice(0, 4));
+  };
+
+  useEffect(() => {
+    handleShuffle();
+  }, []);
+
   return (
     <main className={styles.main}>
       <section className={styles.header_section}>
@@ -35,7 +48,7 @@ export default function Home() {
           </motion.p>
         </div>
         <ul className={styles.galery}>
-          {randomObject.map((obj, index) => {
+          {array.map((obj, index) => {
             return (
               <motion.li key={obj.id} initial={{ y: -20, opacity: 0 }} animate={{ y: -0, opacity: 1 }}>
                 <Card id={obj.id}>

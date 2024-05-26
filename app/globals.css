@@ -24,6 +24,11 @@ body {
   grid-template-rows: auto 1fr auto;
   align-items: center;
   background-color: hsl(0, 0%, 95%);
+  overflow: auto;
+}
+
+body.o {
+  overflow: hidden;
 }
 ul {
   list-style-type: none;

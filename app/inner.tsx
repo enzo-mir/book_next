@@ -1,13 +1,18 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import styles from "#styles/inner.module.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
 const Inner = ({ children }: { children: ReactNode }) => {
   var pathName = usePathname().replace("/", "");
-  if (pathName.includes("/")) {
-    pathName = `project : ${pathName.slice(pathName.indexOf("/") + 1)}`;
-  }
+
+  const isValidPage = ["/portfolio", "/", "/about"].includes(usePathname());
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.body.classList.remove("o");
+    }, 1500);
+  });
 
   const staggerTransition = (index: number) => {
     switch (index % 7) {
@@ -27,22 +32,24 @@ const Inner = ({ children }: { children: ReactNode }) => {
     }
   };
   return (
-    <AnimatePresence>
-      <motion.div initial={{ zIndex: 50 }} animate={{ zIndex: -1, transition: { delay: 2 } }} exit={{ zIndex: 50 }} className={styles.wrapper}>
-        <motion.h1 initial={{ top: "50%", visibility: "visible" }} animate={{ top: "40%", visibility: "hidden", transition: { delay: 1.2 } }}>{`${
-          pathName.length ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1) : ".Me"
-        }`}</motion.h1>
-        {Array.from({ length: 28 }, (_, index) => (
-          <motion.span
-            initial={{ height: "100%", opacity: 1 }}
-            animate={{ height: "0%", opacity: 0, transition: { duration: 0.4, delay: staggerTransition(index) } }}
-            exit={{ height: "100%", opacity: 1 }}
-            key={index}
-          ></motion.span>
-        ))}
-      </motion.div>
+    <>
+      {isValidPage ? (
+        <motion.div initial={{ zIndex: 50 }} animate={{ zIndex: -1, transition: { delay: 2 } }} exit={{ zIndex: 50 }} className={styles.wrapper}>
+          <motion.h1 initial={{ top: "50%", visibility: "visible" }} animate={{ top: "40%", visibility: "hidden", transition: { delay: 1.2 } }}>{`${
+            pathName.length ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1) : ".Me"
+          }`}</motion.h1>
+          {Array.from({ length: 28 }, (_, index) => (
+            <motion.span
+              initial={{ height: "100%", opacity: 1 }}
+              animate={{ height: "0%", opacity: 0, transition: { duration: 0.4, delay: staggerTransition(index) } }}
+              exit={{ height: "100%", opacity: 1 }}
+              key={index}
+            ></motion.span>
+          ))}
+        </motion.div>
+      ) : null}
       {children}
-    </AnimatePresence>
+    </>
   );
 };
 

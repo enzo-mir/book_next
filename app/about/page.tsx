@@ -10,9 +10,12 @@ const Page = () => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
+
   return (
     <main className={styles.main} ref={ref}>
-      <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>Discover me</motion.h1>
+      <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+        Discover me
+      </motion.h1>
 
       <section className={styles.timeline_section}>
         <hr data-visible={inView} />
