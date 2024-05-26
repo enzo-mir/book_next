@@ -109,7 +109,7 @@
 }
 
 .tags_section > div > hr {
-  height: 25%;
+  height: 1svh;
   border: none;
   background-color: var(--segondary-clr);
   border-radius: 20px;
@@ -127,6 +127,7 @@
   padding: 0.25em 1em;
   color: white;
   background-color: var(--segondary-clr);
+  font-size: clamp(14px, 2vw, 17px);
 }
 
 @media screen and (max-width: 800px) {
@@ -151,18 +152,15 @@
 
 @media screen and (max-width: 650px) {
   .main {
-    gap: 5vh;
-    padding-block: 3em;
+    gap: 3vh;
+    padding-block: 3em 2em;
   }
   .tags_section {
     gap: 0.5em;
   }
-  .tags_section > ul > li {
-    font-size: smaller;
-  }
 
   .tags_section > ul {
-    gap: 0.25em;
+    gap: 0.5em;
   }
 
   .article {
@@ -174,6 +172,6 @@
 
 @media screen and (max-height: 700px) {
   .main {
-    padding-block: 3em;
+    padding-block: 3em 2em;
   }
 }
