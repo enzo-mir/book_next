@@ -33,6 +33,5 @@
 @media screen and (max-width: 650px) {
   .card {
     box-shadow: 20px 20px 20px hsla(0, 0%, 75%, 0.6), -20px -20px 20px hsla(0, 0%, 100%, 0.6);
-    aspect-ratio: 16 / 9;
   }
 }

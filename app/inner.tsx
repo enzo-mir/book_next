@@ -29,7 +29,7 @@ const Inner = ({ children }: { children: ReactNode }) => {
   return (
     <AnimatePresence>
       <motion.div initial={{ zIndex: 50 }} animate={{ zIndex: -1, transition: { delay: 2 } }} exit={{ zIndex: 50 }} className={styles.wrapper}>
-        <motion.h1 initial={{ top: "50%", visibility: "visible" }} animate={{ top: "40%", visibility: "hidden", transition: { delay: 1.5 } }}>{`${
+        <motion.h1 initial={{ top: "50%", visibility: "visible" }} animate={{ top: "40%", visibility: "hidden", transition: { delay: 1.2 } }}>{`${
           pathName.length ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1) : ".Me"
         }`}</motion.h1>
         {Array.from({ length: 28 }, (_, index) => (

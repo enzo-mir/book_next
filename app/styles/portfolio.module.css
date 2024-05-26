@@ -1,7 +1,7 @@
 .main {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: auto repeat(4, 1fr);
   grid-template-columns: 100%;
   max-width: 100svw;
   place-items: center start;
@@ -13,10 +13,11 @@
 .main > section:first-child {
   display: grid;
   font-size: x-large;
+  font-size: clamp(18px, 2.8vw, 25px);
 }
 
 .main > section:first-child > h1 {
-  font-size: clamp(30px, 2.7vw, 50px);
+  font-size: clamp(18px, 2.8vw, 25px);
   color: var(--primary_clr);
 }
 .section {
@@ -50,7 +51,7 @@
   border: none;
 }
 .section > div:first-child > h1 {
-  font-size: clamp(25px, 2vw, 30px);
+  font-size: clamp(18px, 2.8vw, 25px);
 }
 .section > div:last-child {
   display: flex;
