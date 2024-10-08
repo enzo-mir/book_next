@@ -29,6 +29,7 @@
   overflow: hidden;
   height: 60svh;
   padding-block: 2em;
+  max-height: 500px;
 }
 
 .section > div:first-child {
@@ -59,6 +60,7 @@
   transition: all 0.5s ease-out;
   align-items: center;
   width: max-content;
+
 }
 .section > div:last-child:hover {
   cursor: grab;

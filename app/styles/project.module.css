@@ -40,6 +40,7 @@
 
 .header_section > h1 {
   font-size: clamp(18px, 2.8vw, 25px);
+  color: var(--segondary-clr);
 }
 
 .header_section > p {

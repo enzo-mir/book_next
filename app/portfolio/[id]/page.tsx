@@ -5,6 +5,7 @@ import data from "../../provider/data.json";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Work_Sans } from "next/font/google";
+import { motion } from "framer-motion";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 function PortfolioItem() {
@@ -14,23 +15,27 @@ function PortfolioItem() {
   return (
     <main className={styles.main}>
       <article className={styles.article}>
-        <section className={styles.img_section}>
+        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.img_section}>
           <span className={workSans.className}>{project.date}</span>
-          <Image fill alt="" src={project.img_url} />
-        </section>
+          <Image priority fill alt={project.title} src={project.img_url} />
+        </motion.section>
         <section className={styles.tags_section}>
-          <div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <h2>Tags</h2>
             <hr />
-          </div>
+          </motion.div>
           <ul>
             {project.tag.map((tag, id) => {
-              return <li key={id} className={workSans.className}>{tag}</li>;
+              return (
+                <motion.li key={id} className={workSans.className} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: id * 0.2 } }}>
+                  {tag}
+                </motion.li>
+              );
             })}
           </ul>
         </section>
       </article>
-      <aside className={styles.aside}>
+      <motion.aside initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className={styles.aside}>
         <section className={styles.header_section}>
           <h1>{project.title}</h1>
           <p className={workSans.className}>{project.description}</p>
@@ -51,7 +56,7 @@ function PortfolioItem() {
             <p>Private website</p>
           )}
         </section>
-      </aside>
+      </motion.aside>
     </main>
   );
 }

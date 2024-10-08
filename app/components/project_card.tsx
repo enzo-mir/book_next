@@ -1,7 +1,6 @@
 import React, { ElementRef, useRef, useState } from "react";
 import styles from "#styles/portfolio.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import { handleDragStart } from "../services/distorsion";
 import data from "../provider/data.json";
 import { motion } from "framer-motion";
@@ -23,7 +22,12 @@ const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<E
     >
       {filter.map((project) => {
         return (
-          <motion.article key={project.id} className={styles.article} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+          <motion.article
+            key={project.id}
+            className={styles.article}
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1, transition: { delay: 2 } }}
+          >
             <div>
               <h2 className={workSans.className}>{project.title}</h2>
               <a href={`/portfolio/${project.id}`}>Learn More +</a>

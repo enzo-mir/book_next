@@ -15,10 +15,10 @@ const FilteredElement = ({ filter, text }: { filter: typeof data; text: string }
   return (
     <section className={styles.section} ref={containerRef}>
       <div>
-        <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+        <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}>
           {text}
         </motion.h1>
-        <motion.hr initial={{ width: "0%" }} animate={{ width: "100%", transition: { duration: 0.5 } }} />
+        <motion.hr initial={{ width: "0%" }} animate={{ width: "100%", transition: { duration: 0.5, delay: 1.75 } }} />
       </div>
       <ProjectCard containerRef={containerRef} filter={filter} />
     </section>
@@ -29,10 +29,10 @@ const Page = () => {
   return (
     <main className={styles.main}>
       <section>
-        <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+        <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}>
           Discover my projects
         </motion.h1>
-        <motion.p className={workSans.className} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+        <motion.p className={workSans.className} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}>
           Drag it !
         </motion.p>
       </section>

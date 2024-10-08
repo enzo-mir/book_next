@@ -8,9 +8,9 @@ const NotFound = () => {
   return (
     <main className={styles.main}>
       <h1 className={worksans.className}>This page could not be found</h1>
-      <Link href="/" className={worksans.className}>
+      <a href="/" className={worksans.className}>
         Go back home
-      </Link>
+      </a>
     </main>
   );
 };
