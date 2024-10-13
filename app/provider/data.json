@@ -162,5 +162,16 @@
     "type": "fullstack",
     "tag": ["React", "Inertia", "AdonisJs", "Zod", "Api", "Css"],
     "date": "Mar 13, 2024"
+  },
+  {
+    "id": 15,
+    "img_url": "/front_end_quiz.jpg",
+    "webiste_url": "https://enzo-mir.github.io/frontend-quiz-app/",
+    "git_url": "https://github.com/enzo-mir/frontend-quiz-app",
+    "title": "Quiz App",
+    "description": "Quiz application using no librairies or framwork, datas provide from a static file and the app remember of the theme and your highest score for the test",
+    "type": "frontend",
+    "tag": ["Html", "Css", "Js"],
+    "date": "Sep 14, 2024"
   }
 ]
