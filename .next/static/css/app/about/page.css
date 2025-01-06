@@ -41,11 +41,6 @@
   z-index: -1;
 }
 
-.about_timeline_section__s86ee > hr[data-visible="true"] {
-  top: 0px;
-  opacity: 1;
-}
-
 .about_timeline_section__s86ee > div {
   display: flex;
   flex-direction: column;
@@ -66,22 +61,14 @@
   color: white;
   transition: all 0.5s ease-out;
 }
-.about_timeline_section__s86ee article[data-visible="true"]:nth-child(odd) {
-  transform: translateX(calc(50% - 30px));
-  opacity: 1;
-}
-.about_timeline_section__s86ee article[data-visible="true"]:nth-child(even) {
-  transform: translateX(calc(-50% + 30px));
-  opacity: 1;
-}
 
 .about_article__g_1Gc:nth-child(odd) {
-  transform: translateX(calc(60% - 30px));
+  transform: translateX(calc(50% - 30px));
   opacity: 0;
 }
 .about_article__g_1Gc:nth-child(even) {
   flex-direction: row-reverse;
-  transform: translateX(calc(-60% + 30px));
+  transform: translateX(calc(-50% + 30px));
   opacity: 0;
 }
 .about_article__g_1Gc > aside {
@@ -124,17 +111,13 @@
   }
   .about_timeline_section__s86ee > hr {
     left: 0;
+    top: 0;
+    transform: translateX(-100%);
   }
-  .about_article__g_1Gc:nth-child(even) {
-    transform: translateX(calc(60% - 30px));
-    opacity: 0;
-  }
-
-  .about_timeline_section__s86ee article[data-visible="true"]:nth-child(odd),
-  .about_timeline_section__s86ee article[data-visible="true"]:nth-child(even) {
+  .about_article__g_1Gc:nth-child(even),
+  .about_article__g_1Gc:nth-child(odd) {
     transform: translateX(0px);
-    opacity: 1;
-    height: 100%;
+    opacity: 0;
   }
 
   .about_main__kog3m {

@@ -6,7 +6,6 @@ import Footer from "#components/footer";
 import Inner from "./inner";
 
 const Nimpkish = Nimpkish_font({ src: "./fonts/ED_Nimpkish-Regular.otf" });
-
 export const metadata: Metadata = {
   title: "Home page - Miraglio enzo",
   description: "hi i'm a front end web developer, hire me out !",
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={Nimpkish.className}>
+      <body className={Nimpkish.className + " o"} translate="no">
         <Header />
         <Inner>{children}</Inner>
         <Footer />

@@ -54,7 +54,6 @@
 }
 .portfolio_section__a39U5 > div:first-child > h1 {
   font-size: clamp(18px, 2.8vw, 30px);
-
 }
 .portfolio_section__a39U5 > div:last-child {
   display: flex;
@@ -64,11 +63,11 @@
   align-items: center;
   width: -moz-max-content;
   width: max-content;
-
 }
 .portfolio_section__a39U5 > div:last-child:hover {
   cursor: grab;
 }
+
 .portfolio_article__VmDMU {
   position: relative;
   display: grid;
@@ -77,8 +76,16 @@
   gap: 1em;
   width: clamp(400px, 25svw, 500px);
   aspect-ratio: 3 / 2;
+  transition: all 0.5s ease-out;
 }
 
+.portfolio_article__VmDMU[data-visible="true"] {
+  opacity: 1;
+}
+
+.portfolio_article__VmDMU[data-visible="false"] {
+  opacity: 0 !important;
+}
 .portfolio_article__VmDMU > img {
   position: relative !important;
   height: 100%;
@@ -90,6 +97,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .portfolio_article__VmDMU > div > h2 {
   font-size: clamp(18px, 2vw, 22px);
 }

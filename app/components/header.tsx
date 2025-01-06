@@ -1,5 +1,5 @@
 "use client";
-import React, { ElementRef, MouseEvent, TouchEventHandler, useRef, useState } from "react";
+import React, { ElementRef, MouseEvent, useRef } from "react";
 import GithubIcon from "../images/github.svg";
 import FrontEndMentor from "../images/front_end_mentor.svg";
 import SendEmail from "../images/send_email.svg";
@@ -8,6 +8,7 @@ import { Work_Sans } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getTranslation } from "../services/translation";
+import SwitchLangButton from "./switch_lang_button";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 const Header = () => {
@@ -48,6 +49,7 @@ const Header = () => {
         </nav>
         <h1>
           <a href="/">{t.navbar.home}</a>
+          <SwitchLangButton />
         </h1>
         <ul className={styles.socials}>
           <li

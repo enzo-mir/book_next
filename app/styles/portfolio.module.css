@@ -51,7 +51,6 @@
 }
 .section > div:first-child > h1 {
   font-size: clamp(18px, 2.8vw, 30px);
-
 }
 .section > div:last-child {
   display: flex;
@@ -60,11 +59,11 @@
   transition: all 0.5s ease-out;
   align-items: center;
   width: max-content;
-
 }
 .section > div:last-child:hover {
   cursor: grab;
 }
+
 .article {
   position: relative;
   display: grid;
@@ -73,8 +72,16 @@
   gap: 1em;
   width: clamp(400px, 25svw, 500px);
   aspect-ratio: 3 / 2;
+  transition: all 0.5s ease-out;
 }
 
+.article[data-visible="true"] {
+  opacity: 1;
+}
+
+.article[data-visible="false"] {
+  opacity: 0 !important;
+}
 .article > img {
   position: relative !important;
   height: 100%;
@@ -86,6 +93,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .article > div > h2 {
   font-size: clamp(18px, 2vw, 22px);
 }

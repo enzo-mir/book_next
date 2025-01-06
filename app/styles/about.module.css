@@ -38,11 +38,6 @@
   z-index: -1;
 }
 
-.timeline_section > hr[data-visible="true"] {
-  top: 0px;
-  opacity: 1;
-}
-
 .timeline_section > div {
   display: flex;
   flex-direction: column;
@@ -63,22 +58,14 @@
   color: white;
   transition: all 0.5s ease-out;
 }
-.timeline_section article[data-visible="true"]:nth-child(odd) {
-  transform: translateX(calc(50% - 30px));
-  opacity: 1;
-}
-.timeline_section article[data-visible="true"]:nth-child(even) {
-  transform: translateX(calc(-50% + 30px));
-  opacity: 1;
-}
 
 .article:nth-child(odd) {
-  transform: translateX(calc(60% - 30px));
+  transform: translateX(calc(50% - 30px));
   opacity: 0;
 }
 .article:nth-child(even) {
   flex-direction: row-reverse;
-  transform: translateX(calc(-60% + 30px));
+  transform: translateX(calc(-50% + 30px));
   opacity: 0;
 }
 .article > aside {
@@ -121,17 +108,13 @@
   }
   .timeline_section > hr {
     left: 0;
+    top: 0;
+    transform: translateX(-100%);
   }
-  .article:nth-child(even) {
-    transform: translateX(calc(60% - 30px));
-    opacity: 0;
-  }
-
-  .timeline_section article[data-visible="true"]:nth-child(odd),
-  .timeline_section article[data-visible="true"]:nth-child(even) {
+  .article:nth-child(even),
+  .article:nth-child(odd) {
     transform: translateX(0px);
-    opacity: 1;
-    height: 100%;
+    opacity: 0;
   }
 
   .main {

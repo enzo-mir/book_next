@@ -15,7 +15,7 @@ export default function Page() {
             {t.index.p1}
           </motion.span>
           <motion.span initial={{ opacity: 0, translateX: "2%" }} animate={{ opacity: 1, translateX: "0%", transition: { delay: 1.75 } }}>
-          {t.index.p2}
+            {t.index.p2}
           </motion.span>
         </h1>
 

@@ -20,7 +20,7 @@ const Card = () => {
     }
 
     setShuffledData(shuffleArray());
-  }, []);
+  }, [t]);
 
   return shuffledData.map((obj, index) => (
     <motion.li key={obj.id} initial={{ y: -20, opacity: 0 }} animate={{ y: -0, opacity: 1, transition: { delay: 2 + index * 0.2 } }}>
