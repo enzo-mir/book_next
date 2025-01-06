@@ -7,9 +7,11 @@ import styles from "#styles/header.module.css";
 import { Work_Sans } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getTranslation } from "../services/translation";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 const Header = () => {
+  const t = getTranslation();
   const checkRef = useRef<ElementRef<"input">>(null);
   const pathName = usePathname().replace("/", "");
   function headerVisible(e: MouseEvent) {
@@ -34,18 +36,18 @@ const Header = () => {
           <ul>
             <li>
               <a href="/portfolio" aria-current={pathName === "portfolio" ? true : false} className={workSans.className}>
-                PORTFOLIO
+                {t.navbar.portfolio}
               </a>
             </li>
             <li>
               <a href="/about" aria-current={pathName === "about" ? true : false} className={workSans.className}>
-                ABOUT ME
+                {t.navbar.about}
               </a>
             </li>
           </ul>
         </nav>
         <h1>
-          <a href="/">miraglio enzo</a>
+          <a href="/">{t.navbar.home}</a>
         </h1>
         <ul className={styles.socials}>
           <li

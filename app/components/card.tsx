@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "#styles/card.module.css";
 import { motion } from "framer-motion";
-import data from "../provider/data.json";
+
 import Image from "next/image";
+import { getTranslation } from "../services/translation";
 
 const Card = () => {
-  const [shuffledData, setShuffledData] = useState<typeof data>([]);
+  const t = getTranslation();
+  const [shuffledData, setShuffledData] = useState<typeof t.data>([]);
 
   useEffect(() => {
-    function shuffleArray(): typeof data {
-      const newArray = [...data];
+    function shuffleArray(): typeof t.data {
+      const newArray = [...t.data];
       for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
@@ -31,7 +33,7 @@ const Card = () => {
         <Image fill alt={"projects represented"} src={obj.img_url} priority />
 
         <div>
-          <p>Learn More +</p>
+          <p>{t.learn_more} +</p>
         </div>
       </motion.article>
     </motion.li>

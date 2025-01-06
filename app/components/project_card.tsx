@@ -2,12 +2,15 @@ import React, { ElementRef, useRef, useState } from "react";
 import styles from "#styles/portfolio.module.css";
 import Image from "next/image";
 import { handleDragStart } from "../services/distorsion";
-import data from "../provider/data.json";
+
 import { motion } from "framer-motion";
 import { Work_Sans } from "next/font/google";
+import { getTranslation } from "../services/translation";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "600" });
-const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<ElementRef<"section">>; filter: typeof data }) => {
+const t = getTranslation();
+
+const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<ElementRef<"section">>; filter: typeof t.data }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(0);
   const [distortion, setDistortion] = useState(0);
@@ -30,7 +33,7 @@ const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<E
           >
             <div>
               <h2 className={workSans.className}>{project.title}</h2>
-              <a href={`/portfolio/${project.id}`}>Learn More +</a>
+              <a href={`/portfolio/${project.id}`}>{t.learn_more} +</a>
             </div>
             <Image fill objectFit="cover" alt="projects" src={project.img_url} fetchPriority="high" />
           </motion.article>

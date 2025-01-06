@@ -5,11 +5,13 @@ import ProjectCard from "#components/project_card";
 import { filterByAdonis, filterByApi, filterByHtml } from "../services/filter_projects";
 import { motion } from "framer-motion";
 import { Work_Sans } from "next/font/google";
-import data from "../provider/data.json";
+
+import { getTranslation } from "../services/translation";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "600" });
+const t = getTranslation();
 
-const FilteredElement = ({ filter, text }: { filter: typeof data; text: string }) => {
+const FilteredElement = ({ filter, text }: { filter: typeof t.data; text: string }) => {
   const containerRef = useRef<ElementRef<"section">>(null);
 
   return (
@@ -30,10 +32,10 @@ const Page = () => {
     <main className={styles.main}>
       <section>
         <motion.h1 initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}>
-          Discover my projects
+          {t.portfolio.h1}
         </motion.h1>
         <motion.p className={workSans.className} initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}>
-          Drag it !
+          {t.portfolio.p}
         </motion.p>
       </section>
 

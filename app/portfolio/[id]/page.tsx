@@ -1,16 +1,18 @@
 "use client";
 import Image from "next/image";
 import styles from "#styles/project.module.css";
-import data from "../../provider/data.json";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Work_Sans } from "next/font/google";
 import { motion } from "framer-motion";
+import { getTranslation } from "../../services/translation";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
+const t = getTranslation();
+
 function PortfolioItem() {
   const id = Number.parseInt(useParams().id as string);
-  const project = data[id];
+  const project = t.data[id];
 
   return (
     <main className={styles.main}>
