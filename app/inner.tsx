@@ -1,8 +1,9 @@
 "use client";
 import React, { ReactNode, useEffect } from "react";
 import styles from "#styles/inner.module.css";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+
 const Inner = ({ children }: { children: ReactNode }) => {
   var pathName = usePathname().replace("/", "");
 

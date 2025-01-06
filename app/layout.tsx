@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={Nimpkish.className + " o"}>
+      <body className={Nimpkish.className}>
         <Header />
         <Inner>{children}</Inner>
         <Footer />
