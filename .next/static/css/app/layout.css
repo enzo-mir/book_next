@@ -238,7 +238,6 @@
   transform: translate(-50%, -50%);
   z-index: 100;
   transition: visibility 0.2s ease;
-  animation: inner_anim__GrKDj ease 0.2s forwards;
 }
 
 @keyframes inner_anim__GrKDj {

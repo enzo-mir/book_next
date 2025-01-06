@@ -7,8 +7,8 @@ import styles from "#styles/header.module.css";
 import { Work_Sans } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
+const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 const Header = () => {
   const checkRef = useRef<ElementRef<"input">>(null);
   const pathName = usePathname().replace("/", "");

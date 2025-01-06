@@ -1,5 +1,4 @@
 "use client";
-import data from "./provider/data.json";
 import styles from "#styles/main.module.css";
 import { motion } from "framer-motion";
 import Card from "#components/card";

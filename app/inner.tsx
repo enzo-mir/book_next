@@ -36,13 +36,13 @@ const Inner = ({ children }: { children: ReactNode }) => {
     <>
       {isValidPage ? (
         <motion.div initial={{ zIndex: 50 }} animate={{ zIndex: -1, transition: { delay: 2 } }} exit={{ zIndex: 50 }} className={styles.wrapper}>
-          <motion.h1 initial={{ top: "50%", visibility: "visible" }} animate={{ top: "40%", visibility: "hidden", transition: { delay: 1.2 } }}>{`${
+          <motion.h1 initial={{ top: "50%", opacity: 1 }} animate={{ top: "40%", opacity: 0, transition: { delay: 1.2 } }}>{`${
             pathName.length ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1) : ".Me"
           }`}</motion.h1>
           {Array.from({ length: 28 }, (_, index) => (
             <motion.span
               initial={{ height: "100%", opacity: 1 }}
-              animate={{ height: "0%", opacity: 0, transition: { duration: 0.4, delay: staggerTransition(index) } }}
+              animate={{ height: "0%", transition: { duration: 0.4, delay: staggerTransition(index) } }}
               exit={{ height: "100%", opacity: 1 }}
               key={index}
             ></motion.span>
