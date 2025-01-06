@@ -3,6 +3,7 @@ import Langsvg from "../images/lang.svg";
 import { LANGUAGE_KEY } from "../services/translation";
 
 const SwitchLangButton = () => {
+  if (typeof window === "undefined") return null;
   const storedLanguage = sessionStorage.getItem(LANGUAGE_KEY);
   const switchLang = () => {
     if (storedLanguage === "fr") {
