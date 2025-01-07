@@ -1,71 +1,40 @@
 {
   "pages": {
-    "/not-found": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/a0cadd799ea0d7e7.css",
-      "static/chunks/app/not-found-2a1fd80c141c3093.js"
+    "/[locale]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[locale]/page.css",
+      "static/chunks/app/[locale]/page.js"
     ],
-    "/_not-found/page": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/a0cadd799ea0d7e7.css",
-      "static/chunks/app/_not-found/page-26e40f427375d4ab.js"
+    "/[locale]/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[locale]/layout.css",
+      "static/chunks/app/[locale]/layout.js"
     ],
-    "/layout": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/18197856f25d364a.css",
-      "static/chunks/942-d05f8caf70739624.js",
-      "static/chunks/903-06d6cb8a3b02f9a1.js",
-      "static/chunks/app/layout-aae9840bd458980f.js"
+    "/[locale]/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[locale]/not-found.css",
+      "static/chunks/app/[locale]/not-found.js"
     ],
-    "/page": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/4fd2129e3caceabf.css",
-      "static/chunks/942-d05f8caf70739624.js",
-      "static/chunks/778-2262f46b4b8b6317.js",
-      "static/chunks/app/page-0125fc939afe2a7a.js"
+    "/[locale]/portfolio/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[locale]/portfolio/page.css",
+      "static/chunks/app/[locale]/portfolio/page.js"
     ],
-    "/about/page": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/11e1e78f6b24891d.css",
-      "static/chunks/942-d05f8caf70739624.js",
-      "static/chunks/778-2262f46b4b8b6317.js",
-      "static/chunks/app/about/page-ac55f0b2004f70e1.js"
+    "/[locale]/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[locale]/about/page.css",
+      "static/chunks/app/[locale]/about/page.js"
     ],
-    "/portfolio/[id]/page": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/e270a7e2821c7e67.css",
-      "static/chunks/942-d05f8caf70739624.js",
-      "static/chunks/778-2262f46b4b8b6317.js",
-      "static/chunks/903-06d6cb8a3b02f9a1.js",
-      "static/chunks/app/portfolio/[id]/page-4bf4d8b12644e85f.js"
-    ],
-    "/portfolio/page": [
-      "static/chunks/webpack-22f0c577c2ad90bb.js",
-      "static/chunks/ca96a25d-dc052a94509e307d.js",
-      "static/chunks/985-312053ece00a1c3f.js",
-      "static/chunks/main-app-2ba2941460f8650d.js",
-      "static/css/d182507de0ac3666.css",
-      "static/chunks/942-d05f8caf70739624.js",
-      "static/chunks/778-2262f46b4b8b6317.js",
-      "static/chunks/app/portfolio/page-569afada956f45ef.js"
+    "/[locale]/portfolio/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[locale]/portfolio/[id]/page.css",
+      "static/chunks/app/[locale]/portfolio/[id]/page.js"
     ]
   }
 }
