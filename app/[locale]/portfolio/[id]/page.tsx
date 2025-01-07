@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import styles from "#styles/project.module.css";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 import { Work_Sans } from "next/font/google";
 import { motion } from "framer-motion";
-
 import useGetData from "app/[locale]/provider/get_data";
+
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
 function PortfolioItem() {
@@ -15,6 +15,7 @@ function PortfolioItem() {
   const { data } = useGetData();
   const project = data[id];
 
+  if (!project) return notFound();
   return (
     <main className={styles.main}>
       <article className={styles.article}>

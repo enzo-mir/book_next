@@ -15,6 +15,8 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ params, children }: { params: Promise<{ locale: string }>; children: ReactElement }) {
   const { locale } = await params;
+  
+  
 
   return (
     <html lang="en">

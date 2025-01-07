@@ -1,0 +1,1 @@
+"use strict";exports.id=540,exports.ids=[540],exports.modules={3540:(e,o,r)=>{r.r(o),r.d(o,{default:()=>i});let i={index:{p1:"hi",p2:"i'm a fullstack web developer",phrase:"Let's discover my code !"},navbar:{home:"miraglio enzo",portfolio:"PORTFOLIO",about:"ABOUT ME"},portfolio:{h1:"Discover my projects",p:"Drag it !"},discover:"Discover me",learn_more:"Learn More"}}};

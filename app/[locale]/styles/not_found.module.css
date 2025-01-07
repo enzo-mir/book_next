@@ -1,13 +1,18 @@
 .main {
   display: grid;
-  place-items: center start;
+  place-items: center;
+  align-content: center;
+  width: fit-content;
+  place-self: center;
+  height: 100svh;
   gap: 2em;
-  justify-self: center;
 }
 
 .main a {
   position: relative;
   font-size: clamp(15px, 2vw, 22px);
+  text-align: left;
+  justify-self: start;
 }
 .main a::after {
   position: absolute;
