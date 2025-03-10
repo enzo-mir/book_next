@@ -219,6 +219,17 @@
       "type": "frontend",
       "tag": ["Html", "Css", "Js"],
       "date": "Sep 14, 2024"
+    },
+    {
+      "id": 16,
+      "img_url": "/weraw.jpg",
+      "webiste_url": "https://www.weraw.fr/",
+      "git_url": "https://github.com/enzo-mir/weraw.git",
+      "title": "Weraw",
+      "description": "Votre espace dédié à la prévisualisation de votre shooting photo",
+      "type": "fullstack",
+      "tag": ["React", "Inertia", "AdonisJs", "Zod"],
+      "date": "Fev 20, 2025"
     }
   ]
 }

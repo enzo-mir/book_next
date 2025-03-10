@@ -8,6 +8,7 @@ import { ReactElement } from "react";
 import { I18nProviderClient } from "../../locales/client";
 
 const Nimpkish = Nimpkish_font({ src: "./fonts/ED_Nimpkish-Regular.otf" });
+
 export const metadata: Metadata = {
   title: "Home page - Miraglio enzo",
   description: "hi i'm a front end web developer, hire me out !",
@@ -15,8 +16,6 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ params, children }: { params: Promise<{ locale: string }>; children: ReactElement }) {
   const { locale } = await params;
-  
-  
 
   return (
     <html lang="en">
