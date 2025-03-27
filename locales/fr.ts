@@ -16,6 +16,14 @@ export default {
     p: "Faites défiler !",
   },
 
+  projects: {
+    repo: {
+      open: "Voir le Github",
+      private: "Dépôt privé",
+    },
+    website: "Visiter le site",
+  },
+
   discover: "Mon avancement",
   learn_more: "En savoir",
 } as const;

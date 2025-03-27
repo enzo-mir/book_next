@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
         <p>created by Enzo Miraglio, designed by <a href='#'>@elodiecarr</a></p>
-        <p>©copyright 2024 - Enzo Miraglio</p>
+        <p>©copyright 2025 - Enzo Miraglio</p>
     </footer>
   )
 }

@@ -15,6 +15,14 @@ export default {
     p: "Drag it !",
   },
 
+  projects: {
+    repo: {
+      open: "See Github",
+      private: "Private repo",
+    },
+    website: "Go to website",
+  },
+
   discover: "Discover me",
   learn_more: "Learn More",
 } as const;

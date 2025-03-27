@@ -6,11 +6,13 @@ import Link from "next/link";
 import { Work_Sans } from "next/font/google";
 import { motion } from "framer-motion";
 import useGetData from "app/[locale]/provider/get_data";
+import { useI18n } from "locales/client";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 
 function PortfolioItem() {
   const id = Number.parseInt(useParams().id as string);
+  const t = useI18n();
 
   const { data } = useGetData();
   const project = data[id];
@@ -47,18 +49,14 @@ function PortfolioItem() {
         <section className={styles.cta_section}>
           {project.git_url ? (
             <Link href={project.git_url} target="_blank" className={workSans.className}>
-              See Github
+              {t("projects.repo.open")}
             </Link>
           ) : (
-            <p>Private repo</p>
+            <p>{t("projects.repo.private")}</p>
           )}
-          {project.webiste_url ? (
-            <Link href={project.webiste_url} target="_blank" className={workSans.className}>
-              Go to website
-            </Link>
-          ) : (
-            <p>Private website</p>
-          )}
+          <Link href={project.webiste_url} target="_blank" className={workSans.className}>
+            {t("projects.website")}
+          </Link>
         </section>
       </motion.aside>
     </main>
