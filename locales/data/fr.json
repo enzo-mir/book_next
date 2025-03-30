@@ -178,17 +178,6 @@
       "date": "Jan 7, 2024"
     },
     {
-      "id": 12,
-      "img_url": "/restaurant_ecf.png",
-      "webiste_url": "https://ecf2024.fr/",
-      "git_url": "https://github.com/enzo-mir/ecf_adonis-inertia.git",
-      "title": "Réservation Restaurant",
-      "description": "Cette application est utilisée pour effectuer une réservation avec des données utilisateur si vous êtes connecté et des données flexibles via le panneau administrateur.",
-      "type": "fullstack",
-      "tag": ["React", "Inertia", "AdonisJs", "Typescript", "Zod", "zustand", "mysql"],
-      "date": "Jan 21, 2024"
-    },
-    {
       "id": 13,
       "img_url": "/linkfour.webp",
       "webiste_url": "http://linkfour.uqkn2942.odns.fr/",
