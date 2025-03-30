@@ -59,8 +59,6 @@ jobs:
             pnpm install
             pnpm build
 
-            pnpm i -P
-                    
             cat > .env << 'EOL'
             ${{ secrets.ENV_CONTENT }}
             EOL

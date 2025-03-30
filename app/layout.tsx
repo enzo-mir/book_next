@@ -10,9 +10,7 @@ export const metadata: Metadata = {
   description: "hi i'm a front end web developer, hire me out !",
 };
 
-export default async function RootLayout({ params, children }: { params: Promise<{ locale: string }>; children: ReactElement }) {
-  const { locale } = await params;
-
+export default async function RootLayout({ children }: { params: Promise<{ locale: string }>; children: ReactElement }) {
   return (
     <html lang="en">
       <body className={Nimpkish.className + " o"} translate="no">

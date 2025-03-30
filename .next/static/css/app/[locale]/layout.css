@@ -1,0 +1,360 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/[locale]/styles/header.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.header_header__LvZAI {
+  display: grid;
+  grid-template-columns: 30% 1fr 30%;
+  text-align: center;
+  align-items: center;
+  padding-block: 1em;
+  z-index: 50;
+}
+
+.header_header__LvZAI > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  font-size: clamp(22px, 3vw, 45px);
+}
+
+.header_header__LvZAI > h1 > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  color: var(--segondary-clr);
+  cursor: pointer;
+}
+
+.header_nav__eGgqx {
+  display: grid;
+  place-items: center start;
+}
+.header_nav__eGgqx a {
+  position: relative;
+  font-size: clamp(15px, 2vw, 22px);
+}
+.header_nav__eGgqx a::after {
+  position: absolute;
+  content: "";
+  transition: all 0.3s ease-out;
+  bottom: 0px;
+  transform: translate(-50%, 15px);
+  left: 50%;
+  width: 100%;
+  opacity: 0;
+  height: 2px;
+  background-color: black;
+  border-radius: 10px;
+}
+.header_nav__eGgqx a[aria-current="false"]:hover::after {
+  width: 90%;
+  transform: translate(-50%, 10px);
+  opacity: 1;
+}
+.header_nav__eGgqx a[aria-current="true"]::after {
+  transform: translate(-50%, 10px);
+  opacity: 1;
+}
+
+.header_nav__eGgqx > ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+}
+
+.header_socials__bIwNo {
+  display: flex;
+  gap: 1.5em;
+  justify-content: end;
+  align-items: center;
+}
+.header_socials__bIwNo > li {
+  position: relative;
+}
+
+.header_socials__bIwNo a {
+  display: block;
+  height: 100%;
+}
+.header_socials__bIwNo > li:hover > span {
+  transform: translate(-50%, 0px);
+}
+.header_socials__bIwNo > li > span {
+  position: absolute;
+  transition: all 0.2s ease-out;
+  transform: translate(-50%, 20px);
+  left: 50%;
+  top: 100%;
+  width: max-content;
+  opacity: 0;
+  aspect-ratio: 1 / 1;
+  z-index: -1;
+}
+.header_burger__pKYfX {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  rotate: 180deg;
+}
+
+.header_burger__pKYfX span {
+  background: var(--segondary-clr);
+  border-radius: 10px;
+  height: 100%;
+  margin: 3px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.header_burger__pKYfX span:nth-of-type(1) {
+  width: 75%;
+}
+
+.header_burger__pKYfX span:nth-of-type(2) {
+  width: 100%;
+}
+
+.header_burger__pKYfX span:nth-of-type(3) {
+  width: 50%;
+}
+
+.header_burger__pKYfX input[type="checkbox"] {
+  display: none;
+}
+
+.header_burger__pKYfX input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: rotatez(45deg) translate(4px, 1px);
+}
+
+.header_burger__pKYfX input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+.header_burger__pKYfX input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform: translate(15px, -5px) rotatez(45deg);
+}
+
+@media screen and (min-width: 700px) {
+  .header_burger__pKYfX {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header_header__LvZAI {
+    position: fixed;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    justify-items: center;
+    top: 0px;
+    gap: 5%;
+    height: calc(50px + 1.5em);
+    padding-block: calc(50px + 2em) 0;
+    overflow: hidden;
+    background: linear-gradient(white 25%, transparent);
+    width: 100%;
+    transition: all 0.3s ease-out;
+  }
+  .header_header__LvZAI > h1 {
+    position: absolute;
+    top: 1em;
+  }
+  .header_nav__eGgqx,
+  .header_socials__bIwNo {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
+  .header_header__LvZAI:has(label > input[type="checkbox"]:checked) {
+    height: 100%;
+    min-height: max-content;
+    padding-block: calc(50px + 3em) 0;
+  }
+  .header_header__LvZAI:has(label > input[type="checkbox"]:checked) > nav,
+  .header_header__LvZAI:has(label > input[type="checkbox"]:checked) > ul {
+    opacity: 1;
+  }
+
+  .header_nav__eGgqx a {
+    font-size: 1.2em;
+  }
+
+  .header_nav__eGgqx > ul {
+    gap: 2em;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/font/google/target.css?{"path":"app\\[locale]\\components\\header.tsx","import":"Work_Sans","arguments":[{"subsets":["latin"],"weight":"500"}],"variableName":"workSans"} ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* vietnamese */
+@font-face {
+  font-family: '__Work_Sans_ca066d';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/_next/static/media/675ecb0eaa8eed5d-s.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: '__Work_Sans_ca066d';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/_next/static/media/01b13ac70eb9f336-s.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: '__Work_Sans_ca066d';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/_next/static/media/252df3bcfe5895ab-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: '__Work_Sans_Fallback_ca066d';src: local("Arial");ascent-override: 83.09%;descent-override: 21.71%;line-gap-override: 0.00%;size-adjust: 111.93%
+}.__className_ca066d {font-family: '__Work_Sans_ca066d', '__Work_Sans_Fallback_ca066d';font-weight: 500;font-style: normal
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/[locale]/styles/inner.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.inner_wrapper__ZgAQ_ {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  animation: inner_anim__45Y8D ease 0.2s forwards;
+}
+
+.inner_wrapper__ZgAQ_ > h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  transition: visibility 0.2s ease;
+}
+
+@keyframes inner_anim__45Y8D {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.inner_wrapper__ZgAQ_ > span {
+  position: relative;
+  background: var(--segondary-clr);
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[3].use[1]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[3].use[2]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/font/local/target.css?{"path":"app\\[locale]\\layout.tsx","import":"","arguments":[{"src":"./fonts/ED_Nimpkish-Regular.otf"}],"variableName":"Nimpkish"} ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+font-family: '__Nimpkish_ca87af';
+src: url(/_next/static/media/fdda012790afb416-s.p.otf) format('opentype');
+font-display: swap;
+}@font-face {font-family: '__Nimpkish_Fallback_ca87af';src: local("Arial");ascent-override: 92.39%;descent-override: 23.10%;line-gap-override: 15.40%;size-adjust: 103.90%
+}.__className_ca87af {font-family: '__Nimpkish_ca87af', '__Nimpkish_Fallback_ca87af'
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/[locale]/globals.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary_clr: #034990;
+  --segondary-clr: #e09006;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+main,
+header {
+  padding-inline: 10%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+  overflow: auto;
+}
+
+body.o {
+  overflow: hidden;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+  main,
+  header {
+    padding-inline: 2em;
+  }
+  h1,
+  h2 {
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/.pnpm/next@14.2.3_@babel+core@7.24.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/[locale]/styles/footer.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.footer_footer__xpnNK {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  font-size: smaller;
+  padding-block: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .footer_footer__xpnNK {
+    font-size: x-small;
+  }
+}
+
