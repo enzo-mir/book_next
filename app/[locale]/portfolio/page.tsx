@@ -1,5 +1,5 @@
 "use client";
-import React, { ElementRef, RefObject, useRef } from "react";
+import React, { ElementRef, useRef } from "react";
 import styles from "#styles/portfolio.module.css";
 import ProjectCard from "../components/project_card";
 import { filterByAdonis, filterByApi, filterByHtml } from "../services/filter_projects";

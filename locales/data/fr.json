@@ -167,17 +167,6 @@
       "date": "Dec 8, 2022"
     },
     {
-      "id": 11,
-      "img_url": "/project_managment.png",
-      "webiste_url": "http://projectmanagment.uqkn2942.odns.fr/",
-      "git_url": "https://github.com/enzo-mir/project_management_adonis.git",
-      "title": "Gestion de Projet",
-      "description": "L'application de gestion de tâches/projets contient une authentification, un rendu côté client (CSR) avec Inertia, et l'utilisation de JWT pour la réinitialisation de mot de passe.",
-      "type": "fullstack",
-      "tag": ["React", "Inertia", "AdonisJs", "Typescript", "JWT"],
-      "date": "Jan 7, 2024"
-    },
-    {
       "id": 13,
       "img_url": "/linkfour.webp",
       "webiste_url": "http://linkfour.uqkn2942.odns.fr/",

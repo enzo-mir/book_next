@@ -167,17 +167,6 @@
       "date": "Dec 8, 2022"
     },
     {
-      "id": 11,
-      "img_url": "/project_managment.png",
-      "webiste_url": "http://projectmanagment.uqkn2942.odns.fr/",
-      "git_url": "https://github.com/enzo-mir/project_management_adonis.git",
-      "title": "Project management",
-      "description": "The app contains authentification, CSR (client side rendering) with inertia, JWT for reset password",
-      "type": "fullstack",
-      "tag": ["React", "Inertia", "AdonisJs", "Typescript", "JWT"],
-      "date": "Jan 7, 2024"
-    },
-    {
       "id": 13,
       "img_url": "/linkfour.webp",
       "webiste_url": "https://links.enzomrg.com/",

@@ -8,13 +8,11 @@ import { Work_Sans } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SwitchLangButton from "./switch_lang_button";
-import { useLocale } from "next-intl";
 import { useI18n } from "locales/client";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "500" });
 const Header = () => {
   const t = useI18n();
-  const locale = useLocale();
   const checkRef = useRef<ElementRef<"input">>(null);
   const pathName = usePathname().replace("/", "");
   function headerVisible(e: MouseEvent) {
@@ -50,7 +48,7 @@ const Header = () => {
           </ul>
         </nav>
         <h1>
-          <a href={"/"}>{t("navbar.home")}</a>
+          <Link href={"/"}>{t("navbar.home")}</Link>
           <SwitchLangButton />
         </h1>
         <ul className={styles.socials}>
@@ -59,27 +57,27 @@ const Header = () => {
             onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
           >
             <span>github</span>
-            <Link rel="external" href="https://github.com/enzo-mir" target="_blank">
+            <a rel="external" href="https://github.com/enzo-mir" target="_blank">
               <GithubIcon />
-            </Link>
+            </a>
           </li>
           <li
             onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
             onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
           >
             <span>frontendmentor</span>
-            <Link rel="external" href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
+            <a rel="external" href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
               <FrontEndMentor />
-            </Link>
+            </a>
           </li>
           <li
             onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
             onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
           >
             <span>mail</span>
-            <Link rel="external" href="mailto:miraglioenzo93@gmail.com" target="_blank">
+            <a rel="external" href="mailto:miraglioenzo93@gmail.com" target="_blank">
               <SendEmail />
-            </Link>
+            </a>
           </li>
         </ul>
         <label htmlFor="check" className={styles.burger}>

@@ -15,7 +15,7 @@ function PortfolioItem() {
   const t = useI18n();
 
   const { data } = useGetData();
-  const project = data[id];
+  const project = data.find((project) => project.id === id);
 
   if (!project) return notFound();
   return (
@@ -23,7 +23,7 @@ function PortfolioItem() {
       <article className={styles.article}>
         <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.img_section}>
           <span className={workSans.className}>{project.date}</span>
-          <Image priority fill alt={project.title} src={project.img_url} />
+          <Image fetchPriority="high" width={600} height={400} alt={project.title} src={project.img_url} />
         </motion.section>
         <section className={styles.tags_section}>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

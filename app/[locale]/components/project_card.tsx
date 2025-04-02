@@ -7,16 +7,16 @@ import { motion, useInView } from "framer-motion";
 import { Work_Sans } from "next/font/google";
 import type { data } from "locales/data/en.json";
 import { useI18n } from "locales/client";
+import Link from "next/link";
 
 const workSans = Work_Sans({ subsets: ["latin"], weight: "600" });
-const Article = ({ project }: { project: (typeof data)[0] }) => {
+const Article = ({ project, id }: { project: (typeof data)[0]; id: number }) => {
   const t = useI18n();
   const ref = useRef<ElementRef<"article">>(null);
   const isInView = useInView(ref, { once: true });
 
   return (
     <motion.article
-      key={project.id}
       className={styles.article}
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1, transition: { delay: 2 } }}
@@ -25,7 +25,7 @@ const Article = ({ project }: { project: (typeof data)[0] }) => {
     >
       <div>
         <h2 className={workSans.className}>{project.title}</h2>
-        <a href={`/portfolio/${project.id}`}>{t("learn_more")} +</a>
+        <Link href={`/portfolio/${id}`}>{t("learn_more")} +</Link>
       </div>
       <Image fill objectFit="cover" alt="projects" src={project.img_url} fetchPriority="high" />
     </motion.article>
@@ -46,7 +46,7 @@ const ProjectCard = ({ containerRef, filter }: { containerRef: React.RefObject<E
       }}
     >
       {filter.map((project) => {
-        return <Article key={project.id} project={project} />;
+        return <Article key={project.id} id={project.id} project={project} />;
       })}
     </div>
   );
