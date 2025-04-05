@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Portfolio from "@pages/portfolio";
-import About from "@pages/about";
-import Project from "@pages/project";
-import NotFound from "@pages/not_found";
+import React from "react";
+const Home = React.lazy(() => import("./pages/home"));
+const Portfolio = React.lazy(() => import("./pages/portfolio"));
+const About = React.lazy(() => import("./pages/about"));
+const Project = React.lazy(() => import("./pages/project"));
+const NotFound = React.lazy(() => import("./pages/not_found"));
 const Navigation = () => {
   return (
     <Routes>

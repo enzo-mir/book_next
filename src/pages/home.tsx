@@ -1,7 +1,8 @@
 import styles from "@css/layout.module.css";
 import { motion } from "framer-motion";
-import Card from "@components/card";
+import React, { Suspense } from "react";
 import { useTranslation } from "react-i18next";
+const Card = React.lazy(() => import("@components/card"));
 
 export default function Home() {
   const { t } = useTranslation();
@@ -26,7 +27,9 @@ export default function Home() {
           </motion.p>
         </div>
         <ul className={styles.galery}>
-          <Card />
+          <Suspense fallback={<></>}>
+            <Card />
+          </Suspense>
         </ul>
       </section>
     </main>

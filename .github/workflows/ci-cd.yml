@@ -3,7 +3,7 @@ name: CI/CD pipeline
 on:
   push:
     branches:
-      - main
+      - vite
 
 jobs:
   build:
@@ -52,16 +52,9 @@ jobs:
 
             echo "Removing old build and assets"
 
-            rm -rf .next
+            rm -rf dist node_modules/.vite
 
             echo "Installing dependencies and building the app"
 
             pnpm install
             pnpm build
-
-            cat > .env << 'EOL'
-            ${{ secrets.ENV_CONTENT }}
-            EOL
-                    
-            pm2 start ecosystem.config.cjs
-            pm2 save

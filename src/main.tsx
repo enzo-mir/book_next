@@ -5,13 +5,16 @@ import { BrowserRouter } from "react-router-dom";
 import Layout from "@pages/layout";
 import "@services/i18n";
 import Inner from "@components/inner";
+import { Suspense } from "react";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Inner>
-      <Layout>
-        <Navigation />
-      </Layout>
+      <Suspense fallback={<></>}>
+        <Layout>
+          <Navigation />
+        </Layout>
+      </Suspense>
     </Inner>
   </BrowserRouter>
 );

@@ -1,11 +1,36 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "path";
+import path, { resolve } from "path";
 
 export default ({ mode }: { mode: string }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+
   return defineConfig({
     plugins: [react()],
+    base: "./",
+    build: {
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, "index.html"),
+        },
+        output: {
+          manualChunks(id: string) {
+            if (id.includes("components")) {
+              return "components";
+            }
+            if (id.includes("pages")) {
+              return "pages";
+            }
+            if (id.includes("framer-motion")) {
+              return "framer-motion";
+            }
+            if (id.includes("node_modules")) {
+              return "vendor";
+            }
+          },
+        },
+      },
+    },
 
     server: {
       port: parseInt(process.env.VITE_PORT as string),

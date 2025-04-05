@@ -24,7 +24,6 @@ const FilteredElement = ({ filter, text }: { filter: typeof data; text: string }
 
 const Portfolio = () => {
   const { t } = useTranslation();
-
   const { data } = useGetData();
 
   return (

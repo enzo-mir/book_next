@@ -1,9 +1,9 @@
-import { ComponentRef, MouseEvent, useRef } from "react";
+import React, { ComponentRef, MouseEvent, Suspense, useRef } from "react";
 import GithubIcon from "@assets/images/github";
 import FrontEndMentor from "@assets/images/front_end_mentor";
 import SendEmail from "@assets/images/send_email";
 import styles from "@css/layout.module.css";
-import SwitchLangButton from "./switch_lang_button";
+const SwitchLangButton = React.lazy(() => import("./switch_lang_button"));
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
@@ -51,7 +51,9 @@ const Header = () => {
         </nav>
         <h1>
           <a href={"/"}>{t("navbar.home")}</a>
-          <SwitchLangButton />
+          <Suspense fallback={<></>}>
+            <SwitchLangButton />
+          </Suspense>
         </h1>
         <ul className={styles.socials}>
           <li
