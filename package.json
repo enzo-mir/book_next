@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.14.0",
     "framer-motion": "^12.6.3",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-http-backend": "^3.0.2",
+    "js-cookie": "^3.0.5",
     "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

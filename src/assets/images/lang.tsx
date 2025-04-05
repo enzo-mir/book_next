@@ -11,7 +11,7 @@ const Lang = () => {
       xmlSpace="preserve"
       fill="#e09006"
       stroke="#e09006"
-      stroke-width="0.00512"
+      strokeWidth="0.00512"
       transform="rotate(0)"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" transform="translate(0,0), scale(1)"></g>

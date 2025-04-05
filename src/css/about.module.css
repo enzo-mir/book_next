@@ -8,11 +8,12 @@
   padding-block: 3em 10em;
 }
 
-.main > h1 {
+.main > h2 {
   mix-blend-mode: difference;
   font-size: clamp(25px, 2vw, 30px);
   color: var(--segondary-clr);
   align-self: flex-start;
+  font-family: var(--font-nimpkish);
 }
 
 .timeline_section {
@@ -50,8 +51,6 @@
 .article {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 1em;
   font-size: larger;
   width: 450px;
@@ -62,20 +61,26 @@
 .article:nth-child(odd) {
   transform: translateX(calc(50% - 30px));
   opacity: 0;
+  & > aside > * {
+    text-align: end;
+  }
 }
 .article:nth-child(even) {
   flex-direction: row-reverse;
   transform: translateX(calc(-50% + 30px));
   opacity: 0;
+  & > aside > * {
+    text-align: left;
+  }
 }
 .article > aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: transparent;
+  gap: 1em;
   backdrop-filter: blur(5px);
   width: 100%;
-  padding: 1em 0.5em;
+  padding: 1.5em;
   border-radius: 0.5em;
   background-color: var(--primary_clr);
   border-radius: 0.5em;
@@ -83,11 +88,13 @@
 
 .article > aside > p {
   font-weight: 300;
-  width: 90%;
+  text-wrap: balance;
 }
 
-.article > aside > h1 {
+.article > aside > h3 {
   font-size: clamp(25px, 2vw, 30px);
+  text-transform: capitalize;
+  text-wrap: nowrap;
 }
 
 .article > img {

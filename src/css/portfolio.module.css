@@ -15,10 +15,16 @@
   font-size: x-large;
 }
 
-.main > section:first-child > h1 {
-  font-size: clamp(18px, 2.8vw, 30px);
+.main > section:first-child > h2 {
+  font-size: clamp(18px, 3vw, 35px);
   color: var(--primary_clr);
+  font-family: var(--font-nimpkish);
 }
+
+.main > section:first-child > p {
+  font-weight: bolder;
+}
+
 .section {
   position: relative;
   grid-template-columns: 100%;
@@ -49,8 +55,9 @@
   height: 25%;
   border: none;
 }
-.section > div:first-child > h1 {
+.section > div:first-child > h3 {
   font-size: clamp(18px, 2.8vw, 30px);
+  font-family: var(--font-nimpkish);
 }
 .section > div:last-child {
   display: flex;
@@ -103,14 +110,15 @@
   border: 2px solid black;
   padding: 0.25em 0.5em;
   border-radius: 5px;
-  transition: all 0.2s ease-out;
+  transition: all 0.15s ease-out;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-nimpkish);
 }
 
 .article > div > a:hover,
 .article > div > a:focus-visible {
   translate: 0px -2px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 @media (pointer: coarse) {
   .section {

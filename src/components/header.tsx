@@ -4,7 +4,6 @@ import FrontEndMentor from "@assets/images/front_end_mentor";
 import SendEmail from "@assets/images/send_email";
 import styles from "@css/layout.module.css";
 import SwitchLangButton from "./switch_lang_button";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
@@ -46,7 +45,7 @@ const Header = () => {
           </ul>
         </nav>
         <h1>
-          <Link to={"/"}>{t("navbar.home")}</Link>
+          <a href={"/"}>{t("navbar.home")}</a>
           <SwitchLangButton />
         </h1>
         <ul className={styles.socials}>

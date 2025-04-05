@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.header_section}>
-        <h1>
+        <h2>
           <motion.span initial={{ opacity: 0, translateX: "2%" }} animate={{ opacity: 1, translateX: "0%", transition: { delay: 1.5 } }}>
             {t("index.p1")}
           </motion.span>
           <motion.span initial={{ opacity: 0, translateX: "2%" }} animate={{ opacity: 1, translateX: "0%", transition: { delay: 1.75 } }}>
             {t("index.p2")}
           </motion.span>
-        </h1>
+        </h2>
       </section>
       <section className={styles.bottom_section}>
         <div>
