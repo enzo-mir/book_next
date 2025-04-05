@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "nimpkish";
+  src: url("/fonts/ED_Nimpkish-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary_clr: #034990;
+  --segondary-clr: #e09006;
+  --font-nimpkish: "nimpkish";
+  --font-work-sans: "Work Sans", sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-work-sans);
+}
+
+main,
+header {
+  padding-inline: 10%;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  overflow: auto;
+}
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+body.o {
+  overflow: hidden;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1000px) {
+  main,
+  header {
+    padding-inline: 2em;
+  }
+  h1,
+  h2 {
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+  }
+}
