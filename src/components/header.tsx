@@ -5,11 +5,13 @@ import SendEmail from "@assets/images/send_email";
 import styles from "@css/layout.module.css";
 import SwitchLangButton from "./switch_lang_button";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const { t } = useTranslation();
   const checkRef = useRef<ComponentRef<"input">>(null);
-  const pathName = location.pathname.replace("/", "");
+  const pathName = useLocation().pathname.replace("/", "");
+
   function headerVisible(e: MouseEvent) {
     if (checkRef.current) {
       if (e.target === e.currentTarget) {
@@ -17,16 +19,19 @@ const Header = () => {
       }
     }
   }
+
   function mouseLeave(span: HTMLSpanElement) {
     span.style.opacity = "0";
     span.style.left = `50%`;
   }
+
   function mouseEnterLink(e: MouseEvent<HTMLElement>, span: HTMLSpanElement) {
     const positionX = e.clientX - e.currentTarget.getBoundingClientRect().x;
     e.currentTarget.addEventListener("pointerleave", () => mouseLeave(span));
     span.style.left = `${positionX}px`;
     span.style.opacity = "1";
   }
+
   return (
     <>
       <header className={styles.header} onPointerDown={headerVisible} onMouseDown={headerVisible}>

@@ -3,13 +3,16 @@ import { motion } from "framer-motion";
 import useGetData from "@provider/get_data";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
+import NotFound from "./not_found";
 
 function Project() {
   const id = Number.parseInt(useParams().id as string);
   const { t } = useTranslation();
 
   const { data } = useGetData();
-  const project = data.find((project) => project.id === id)!;
+  const project = data.find((project) => project.id === id);
+
+  if (!project) return <NotFound />;
 
   return (
     <main className={styles.main}>

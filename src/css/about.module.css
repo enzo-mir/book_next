@@ -84,11 +84,15 @@
   border-radius: 0.5em;
   background-color: var(--primary_clr);
   border-radius: 0.5em;
+
+  & > *::selection {
+    color: var(--primary_clr);
+    background-color: white;
+  }
 }
 
 .article > aside > p {
   font-weight: 300;
-  text-wrap: balance;
 }
 
 .article > aside > h3 {

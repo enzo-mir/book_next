@@ -22,9 +22,6 @@ i18n
     ns: ["translate"],
     lng: Cookies.get("lng") || (navigator.language.includes("fr") ? "fr" : "en"),
     defaultNS: "translate",
-    interpolation: {
-      escapeValue: false,
-    },
   });
 
 export default i18n;

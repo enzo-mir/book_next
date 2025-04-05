@@ -3,8 +3,10 @@
   place-items: center;
   align-content: center;
   width: fit-content;
-  place-self: center;
-  height: 100svh;
+  align-self: start;
+  justify-self: center;
+  height: max-content;
+  margin-top: 20svh;
   gap: 2em;
 }
 

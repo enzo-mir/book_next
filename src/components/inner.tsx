@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 export default function Inner({ children }: { children: ReactNode }) {
-  const pathName = useLocation().pathname.split("/")[1];
+  const { pathname } = useLocation();
+  const pathName = pathname.split("/")[1];
 
   const isValidPage = [`portfolio`, ``, `about`].includes(pathName);
   const [loading, setLoading] = useState<boolean>(true);

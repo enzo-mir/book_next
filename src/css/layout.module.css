@@ -5,13 +5,10 @@
   width: 100%;
   font-size: smaller;
   padding-block: 1em;
+  font-family: var(--font-nimpkish);
+  align-self: end;
 }
 
-@media screen and (max-width: 700px) {
-  .footer {
-    font-size: x-small;
-  }
-}
 
 /* HEADER */
 
@@ -33,6 +30,14 @@
   font-family: var(--font-nimpkish);
 }
 
+.header > h1 a {
+  transition: all 0.15s ease-out;
+}
+
+.header > h1 a:hover {
+  scale: 0.95;
+}
+
 .header > h1 > button {
   display: flex;
   justify-content: center;
@@ -43,8 +48,11 @@
   font-weight: bolder;
   color: var(--segondary-clr);
   cursor: pointer;
+  transition: all 0.15s ease-out;
 }
-
+.header > h1 > button:hover {
+  translate: 0px -5px;
+}
 .nav {
   display: grid;
   place-items: center start;
