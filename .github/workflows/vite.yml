@@ -1,9 +1,9 @@
-name: CI/CD pipeline
+name: CI/CD pipeline => vite
 
 on:
   push:
     branches:
-      - main
+      - vite
 
 jobs:
   build:
@@ -48,20 +48,13 @@ jobs:
           script: |
             cd ~/htdocs/www.enzomrg.com
 
-            git pull origin main
+            git pull origin vite
 
             echo "Removing old build and assets"
 
-            rm -rf .next
+            rm -rf dist node_modules/.vite
 
             echo "Installing dependencies and building the app"
 
             pnpm install
             pnpm build
-
-            cat > .env << 'EOL'
-            ${{ secrets.ENV_CONTENT }}
-            EOL
-                    
-            pm2 start ecosystem.config.cjs
-            pm2 save
