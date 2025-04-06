@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /$
+Allow: /index.html
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.ico$
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+Disallow: /tmp/
+Disallow: /node_modules/
+Disallow: /*?
+Disallow: /*.json
+
+Sitemap: https://www.enzomrg.com/sitemap.xml
