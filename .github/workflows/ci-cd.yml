@@ -48,7 +48,7 @@ jobs:
           script: |
             cd ~/htdocs/www.enzomrg.com
 
-            git pull origin vite
+            git pull origin main
 
             echo "Removing old build and assets"
 
