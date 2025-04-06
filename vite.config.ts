@@ -9,25 +9,62 @@ export default ({ mode }: { mode: string }) => {
     plugins: [react()],
     base: "./",
     build: {
+      chunkSizeWarningLimit: 1600,
       rollupOptions: {
         input: {
           main: resolve(__dirname, "index.html"),
         },
         output: {
           manualChunks(id: string) {
-            if (id.includes("components")) {
-              return "components";
-            }
-            if (id.includes("pages")) {
-              return "pages";
-            }
-            if (id.includes("framer-motion")) {
-              return "framer-motion";
-            }
             if (id.includes("node_modules")) {
+              if (id.includes("react")) {
+                return "vendor-react";
+              }
+              if (id.includes("framer-motion")) {
+                return "vendor-framer-motion";
+              }
+              if (id.includes("lodash") || id.includes("ramda")) {
+                return "vendor-utils";
+              }
+              if (id.includes("react-router-dom")) {
+                return "vendor-router";
+              }
+              if (id.includes("axios") || id.includes("fetch")) {
+                return "vendor-api";
+              }
+              if (id.includes("i18next")) {
+                return "vendor-i18n";
+              }
+
               return "vendor";
             }
+
+            // Split your own code by feature
+            if (id.includes("src/pages")) {
+              const page = id.split("pages/")[1].split("/")[0];
+              return `page-${page}`;
+            }
+
+            if (id.includes("src/components")) {
+              const component = id.split("components/")[1].split("/")[0];
+              return `component-${component}`;
+            }
+
+            if (id.includes("src/hooks")) {
+              return "hooks";
+            }
+
+            if (id.includes("src/services")) {
+              return "services";
+            }
+
+            if (id.includes("src/utils")) {
+              return "utils";
+            }
           },
+          chunkFileNames: "assets/js/[name]-[hash].js",
+          entryFileNames: "assets/js/[name]-[hash].js",
+          assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
         },
       },
     },
