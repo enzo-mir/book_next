@@ -1,8 +1,6 @@
 const Lang = () => {
   return (
     <svg
-      height="32px"
-      width="32px"
       version="1.1"
       id="_x32_"
       xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +12,18 @@ const Lang = () => {
       strokeWidth="0.00512"
       transform="rotate(0)"
     >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0" transform="translate(0,0), scale(1)"></g>
-      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="4.096"></g>
+      <g
+        id="SVGRepo_bgCarrier"
+        strokeWidth="0"
+        transform="translate(0,0), scale(1)"
+      ></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        stroke="#CCCCCC"
+        strokeWidth="4.096"
+      ></g>
       <g id="SVGRepo_iconCarrier">
         <g>
           <path

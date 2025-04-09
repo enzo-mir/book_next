@@ -17,9 +17,19 @@ function Project() {
   return (
     <main className={styles.main}>
       <article className={styles.article}>
-        <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.img_section}>
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className={styles.img_section}
+        >
           <span>{project.date}</span>
-          <img fetchPriority="high" width={600} height={400} alt={project.title} src={project.img_url} />
+          <img
+            fetchPriority="high"
+            width={600}
+            height={400}
+            alt={project.title}
+            src={project.img_url}
+          />
         </motion.section>
         <section className={styles.tags_section}>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -29,7 +39,11 @@ function Project() {
           <ul>
             {project.tag.map((tag, id) => {
               return (
-                <motion.li key={id} initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: id * 0.2 } }}>
+                <motion.li
+                  key={id}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { delay: id * 0.2 } }}
+                >
                   {tag}
                 </motion.li>
               );
@@ -37,7 +51,11 @@ function Project() {
           </ul>
         </section>
       </article>
-      <motion.aside initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className={styles.aside}>
+      <motion.aside
+        initial={{ x: 50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        className={styles.aside}
+      >
         <section className={styles.header_section}>
           <h1>{project.title}</h1>
           <p>{project.description}</p>

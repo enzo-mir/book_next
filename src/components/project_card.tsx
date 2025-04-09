@@ -6,7 +6,13 @@ import type { data } from "@locales/en/translate.json";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const Article = ({ project, id }: { project: (typeof data)[0]; id: number }) => {
+const Article = ({
+  project,
+  id,
+}: {
+  project: (typeof data)[0];
+  id: number;
+}) => {
   const { t } = useTranslation();
   const ref = useRef<ComponentRef<"article">>(null);
   const isInView = useInView(ref, { once: true });
@@ -28,14 +34,29 @@ const Article = ({ project, id }: { project: (typeof data)[0]; id: number }) => 
   );
 };
 
-const ProjectCard = ({ containerRef, filter }: { containerRef: RefObject<HTMLElement | null>; filter: typeof data }) => {
+const ProjectCard = ({
+  containerRef,
+  filter,
+}: {
+  containerRef: RefObject<HTMLElement | null>;
+  filter: typeof data;
+}) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(0);
   const [distortion, setDistortion] = useState(0);
 
   return (
     <div
-      onMouseDown={(e) => handleDragStart(e, setPosition, position, setDistortion, sliderRef, containerRef)}
+      onMouseDown={(e) =>
+        handleDragStart(
+          e,
+          setPosition,
+          position,
+          setDistortion,
+          sliderRef,
+          containerRef,
+        )
+      }
       ref={sliderRef}
       style={{
         transform: `translateX(${position}px) skewX(${distortion}deg)`,

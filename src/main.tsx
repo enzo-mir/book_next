@@ -16,5 +16,5 @@ createRoot(document.getElementById("root")!).render(
         </Layout>
       </Suspense>
     </Inner>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

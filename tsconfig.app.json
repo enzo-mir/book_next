@@ -14,7 +14,7 @@
       "@public/*": ["./public/*"],
       "@pages/*": ["./src/pages/*"],
       "@provider/*": ["./src/provider/*"],
-      "@locales/*": ["./src/locales/*"],
+      "@locales/*": ["./src/locales/*"]
     },
 
     /* Bundler mode */

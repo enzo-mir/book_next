@@ -14,6 +14,7 @@
   color: var(--segondary-clr);
   align-self: flex-start;
   font-family: var(--font-nimpkish);
+  font-size: clamp(2.5em, 2vw, 10em);
 }
 
 .timeline_section {
@@ -53,13 +54,13 @@
   justify-content: center;
   gap: 1em;
   font-size: larger;
-  width: 450px;
+  width: clamp(450px, 30svw, 100%);
   color: white;
   transition: all 0.5s ease-out;
 }
 
 .article:nth-child(odd) {
-  transform: translateX(calc(50% - 30px));
+  transform: translateX(calc(45%));
   opacity: 0;
   & > aside > * {
     text-align: end;
@@ -67,7 +68,7 @@
 }
 .article:nth-child(even) {
   flex-direction: row-reverse;
-  transform: translateX(calc(-50% + 30px));
+  transform: translateX(calc(-45%));
   opacity: 0;
   & > aside > * {
     text-align: left;
@@ -96,7 +97,7 @@
 }
 
 .article > aside > h3 {
-  font-size: clamp(25px, 2vw, 30px);
+  font-size: clamp(2.5em, 2vw, 5em);
   text-transform: capitalize;
   text-wrap: nowrap;
 }
@@ -105,6 +106,7 @@
   background-color: #ffffff;
   border-radius: 30%;
   padding: 0.5em;
+  width: clamp(0px, 3svw, 8em);
   border: 2px solid var(--primary_clr);
   align-self: center;
 }

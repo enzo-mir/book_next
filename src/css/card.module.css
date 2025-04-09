@@ -3,10 +3,12 @@
   display: flex;
   justify-content: start;
   align-items: flex-end;
-  width: 100%;
+  width: 20svw;
   max-width: 100%;
-  height: clamp(200px, 100%, 400px);
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  aspect-ratio: 1/1.2;
+  box-shadow:
+    20px 20px 60px #d9d9d9,
+    -20px -20px 60px #ffffff;
   border-radius: 1em;
   font-family: var(--font-nimpkish);
 }
@@ -35,6 +37,8 @@
 
 @media screen and (max-width: 650px) {
   .card {
-    box-shadow: 20px 20px 20px hsla(0, 0%, 75%, 0.6), -20px -20px 20px hsla(0, 0%, 100%, 0.6);
+    box-shadow:
+      20px 20px 20px hsla(0, 0%, 75%, 0.6),
+      -20px -20px 20px hsla(0, 0%, 100%, 0.6);
   }
 }

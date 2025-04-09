@@ -14,7 +14,7 @@ const SwitchLangButton = () => {
   return (
     <button onClick={() => switchLocale()}>
       <Langsvg />
-      {locale.toUpperCase()}
+      {locale.toLocaleLowerCase()}
     </button>
   );
 };

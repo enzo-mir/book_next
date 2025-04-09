@@ -19,7 +19,8 @@ i18n
     },
     fallbackLng: "en",
     ns: ["translate"],
-    lng: Cookies.get("lng") || (navigator.language.includes("fr") ? "fr" : "en"),
+    lng:
+      Cookies.get("lng") || (navigator.language.includes("fr") ? "fr" : "en"),
     defaultNS: "translate",
   });
 

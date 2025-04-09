@@ -34,16 +34,26 @@ const Header = () => {
 
   return (
     <>
-      <header className={styles.header} onPointerDown={headerVisible} onMouseDown={headerVisible}>
+      <header
+        className={styles.header}
+        onPointerDown={headerVisible}
+        onMouseDown={headerVisible}
+      >
         <nav className={styles.nav}>
           <ul>
             <li>
-              <a href={"/portfolio"} aria-current={pathName === "portfolio" ? true : false}>
+              <a
+                href={"/portfolio"}
+                aria-current={pathName === "portfolio" ? true : false}
+              >
                 {t("navbar.portfolio")}
               </a>
             </li>
             <li>
-              <a href={"/about"} aria-current={pathName === "about" ? true : false}>
+              <a
+                href={"/about"}
+                aria-current={pathName === "about" ? true : false}
+              >
                 {t("navbar.about")}
               </a>
             </li>
@@ -57,29 +67,53 @@ const Header = () => {
         </h1>
         <ul className={styles.socials}>
           <li
-            onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
-            onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+            onPointerEnter={(e) =>
+              mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)
+            }
+            onPointerMove={(e) =>
+              mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)
+            }
           >
             <span>github</span>
-            <a rel="external" href="https://github.com/enzo-mir" target="_blank">
+            <a
+              rel="external"
+              href="https://github.com/enzo-mir"
+              target="_blank"
+            >
               <GithubIcon />
             </a>
           </li>
           <li
-            onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
-            onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+            onPointerEnter={(e) =>
+              mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)
+            }
+            onPointerMove={(e) =>
+              mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)
+            }
           >
             <span>frontendmentor</span>
-            <a rel="external" href="https://www.frontendmentor.io/profile/enzo-mir" target="_blank">
+            <a
+              rel="external"
+              href="https://www.frontendmentor.io/profile/enzo-mir"
+              target="_blank"
+            >
               <FrontEndMentor />
             </a>
           </li>
           <li
-            onPointerEnter={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
-            onPointerMove={(e) => mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)}
+            onPointerEnter={(e) =>
+              mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)
+            }
+            onPointerMove={(e) =>
+              mouseEnterLink(e, e.currentTarget.firstChild as HTMLSpanElement)
+            }
           >
             <span>mail</span>
-            <a rel="external" href="mailto:miraglioenzo93@gmail.com" target="_blank">
+            <a
+              rel="external"
+              href="mailto:miraglioenzo93@gmail.com"
+              target="_blank"
+            >
               <SendEmail />
             </a>
           </li>

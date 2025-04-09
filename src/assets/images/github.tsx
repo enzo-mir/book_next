@@ -1,6 +1,6 @@
 const Github = () => {
   return (
-    <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_125_397)">
         <path
           fillRule="evenodd"
@@ -11,7 +11,12 @@ const Github = () => {
       </g>
       <defs>
         <clipPath id="clip0_125_397">
-          <rect width="40" height="38" fill="white" transform="translate(0 0.5)" />
+          <rect
+            width="40"
+            height="38"
+            fill="white"
+            transform="translate(0 0.5)"
+          />
         </clipPath>
       </defs>
     </svg>

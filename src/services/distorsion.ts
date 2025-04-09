@@ -6,10 +6,14 @@ export const handleDragStart = (
   position: number,
   setDistortion: (value: number) => void,
   sliderRef: RefObject<HTMLDivElement | null>,
-  containerRef: RefObject<HTMLElement | null>
+  containerRef: RefObject<HTMLElement | null>,
 ) => {
   event.preventDefault();
-  const maxDrag = -(sliderRef.current!.offsetWidth - containerRef.current!.offsetWidth) - 16;
+  if (!sliderRef.current || !containerRef.current) return;
+
+  const maxDrag =
+    -sliderRef.current?.offsetWidth + containerRef.current?.offsetWidth - 16;
+
   const startX = event.clientX;
   const startLeft = position;
 

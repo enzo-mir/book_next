@@ -201,7 +201,14 @@
       "title": "Link Four",
       "description": "Application semblable à ©Linktree avec authentification et personnalisation des styles/liens.",
       "type": "fullstack",
-      "tag": ["React", "Inertia", "AdonisJs", "Zod", "zustand", "styled-components"],
+      "tag": [
+        "React",
+        "Inertia",
+        "AdonisJs",
+        "Zod",
+        "zustand",
+        "styled-components"
+      ],
       "date": "Mar 6, 2024"
     },
     {
