@@ -23,7 +23,7 @@ const Card = () => {
     <motion.li
       key={obj.id}
       initial={{ y: -20, opacity: 0 }}
-      animate={{ y: -0, opacity: 1, transition: { delay: 2 + index * 0.2 } }}
+      animate={{ y: -0, opacity: 1, transition: { delay: 0.5 + index * 0.2 } }}
     >
       <motion.article
         className={styles.card}

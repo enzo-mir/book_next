@@ -21,7 +21,7 @@ const Article = ({
     <motion.article
       className={styles.article}
       initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1, transition: { delay: 2 } }}
+      animate={{ y: 0, opacity: 1, transition: { delay: 1 } }}
       ref={ref}
       data-visible={isInView}
     >

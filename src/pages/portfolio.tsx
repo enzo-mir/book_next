@@ -24,7 +24,7 @@ const FilteredElement = ({
       <div>
         <motion.h3
           initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}
+          animate={{ y: 0, opacity: 1, transition: { delay: 0.75 } }}
         >
           {text}
         </motion.h3>
@@ -32,7 +32,7 @@ const FilteredElement = ({
           initial={{ width: "0%" }}
           animate={{
             width: "100%",
-            transition: { duration: 0.5, delay: 1.75 },
+            transition: { duration: 0.5, delay: 0.75 },
           }}
         />
       </div>
@@ -50,13 +50,13 @@ const Portfolio = () => {
       <section>
         <motion.h2
           initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}
+          animate={{ y: 0, opacity: 1, transition: { delay: 0.75 } }}
         >
           {t("portfolio.h1")}
         </motion.h2>
         <motion.p
           initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1, transition: { delay: 1.75 } }}
+          animate={{ y: 0, opacity: 1, transition: { delay: 0.75 } }}
         >
           {t("portfolio.p")}
         </motion.p>

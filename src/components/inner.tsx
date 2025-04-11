@@ -35,42 +35,41 @@ export default function Inner({ children }: { children: ReactNode }) {
     }
   };
 
+  const Loading = () => {
+    return (
+      <motion.div
+        initial={{ zIndex: 50 }}
+        animate={{
+          zIndex: -1,
+          transition: { delay: 2 },
+        }}
+        exit={{ opacity: 0 }}
+        className={styles.wrapper}
+      >
+        <motion.h1 initial={{ top: "50%", opacity: 1 }} animate={{ top: "40%", opacity: 0, transition: { delay: 1 } }}>{`${
+          pathName.length ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1) : ".Me"
+        }`}</motion.h1>
+        {Array.from({ length: 28 }, (_, index) => (
+          <motion.span
+            initial={{ height: "100%", opacity: 1 }}
+            animate={{
+              height: "0%",
+              transition: {
+                duration: 0.4,
+                delay: staggerTransition(index),
+              },
+            }}
+            key={index}
+          ></motion.span>
+        ))}
+      </motion.div>
+    );
+  };
+
   return (
     <>
-      <AnimatePresence>
-        {loading && isValidPage ? (
-          <motion.div
-            initial={{ zIndex: 50 }}
-            animate={{ zIndex: -1, transition: { delay: 2 } }}
-            exit={{ opacity: 0 }}
-            className={styles.wrapper}
-          >
-            <motion.h1
-              initial={{ top: "50%", opacity: 1 }}
-              animate={{ top: "40%", opacity: 0, transition: { delay: 1 } }}
-            >{`${
-              pathName.length
-                ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1)
-                : ".Me"
-            }`}</motion.h1>
-            {Array.from({ length: 28 }, (_, index) => (
-              <motion.span
-                initial={{ height: "100%", opacity: 1 }}
-                animate={{
-                  height: "0%",
-                  transition: {
-                    duration: 0.4,
-                    delay: staggerTransition(index),
-                  },
-                }}
-                key={index}
-              ></motion.span>
-            ))}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-
-      {children}
+      <AnimatePresence>{loading && isValidPage ? <Loading /> : null}</AnimatePresence>
+      {!loading && children}
     </>
   );
 }

@@ -16,7 +16,6 @@ export default function Home() {
             animate={{
               opacity: 1,
               translateX: "0%",
-              transition: { delay: 1.5 },
             }}
           >
             {t("index.p1")}
@@ -26,7 +25,7 @@ export default function Home() {
             animate={{
               opacity: 1,
               translateX: "0%",
-              transition: { delay: 1.75 },
+              transition: { delay: 0.25 },
             }}
           >
             {t("index.p2")}
@@ -39,7 +38,7 @@ export default function Home() {
             initial={{ width: "0%" }}
             animate={{
               width: "100%",
-              transition: { duration: 0.5, delay: 1.75 },
+              transition: { duration: 0.5, delay: 0.25 },
             }}
           />
           <motion.p
@@ -47,7 +46,7 @@ export default function Home() {
             animate={{
               y: -0,
               opacity: 1,
-              transition: { duration: 0.5, delay: 1.75 },
+              transition: { duration: 0.5, delay: 0.25 },
             }}
           >
             {t("index.phrase")}
