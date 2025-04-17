@@ -14,5 +14,5 @@ createRoot(document.getElementById("root")!).render(
       <Navigation />
       <Footer />
     </Inner>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

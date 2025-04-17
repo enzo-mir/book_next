@@ -46,8 +46,13 @@ export default function Inner({ children }: { children: ReactNode }) {
         exit={{ opacity: 0 }}
         className={styles.wrapper}
       >
-        <motion.h1 initial={{ top: "50%", opacity: 1 }} animate={{ top: "40%", opacity: 0, transition: { delay: 1 } }}>{`${
-          pathName.length ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1) : ".Me"
+        <motion.h1
+          initial={{ top: "50%", opacity: 1 }}
+          animate={{ top: "40%", opacity: 0, transition: { delay: 1 } }}
+        >{`${
+          pathName.length
+            ? "." + pathName.charAt(0).toUpperCase() + pathName.slice(1)
+            : ".Me"
         }`}</motion.h1>
         {Array.from({ length: 28 }, (_, index) => (
           <motion.span
@@ -68,7 +73,9 @@ export default function Inner({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <AnimatePresence>{loading && isValidPage ? <Loading /> : null}</AnimatePresence>
+      <AnimatePresence>
+        {loading && isValidPage ? <Loading /> : null}
+      </AnimatePresence>
       {!loading && children}
     </>
   );

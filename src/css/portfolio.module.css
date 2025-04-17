@@ -132,7 +132,7 @@
     padding-inline: 5%;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .section {
     overflow-x: auto;
     position: relative;
@@ -157,17 +157,19 @@
   }
 
   .article > div {
-    display: grid;
+    display: flex;
     gap: 1em;
-    grid-template-columns: auto max-content;
     height: fit-content;
+    text-wrap: wrap;
+    height: 3em;
   }
 
   .article > div > a {
-    height: min-content;
+    text-wrap: nowrap;
+    height: fit-content;
   }
   .article > div > h2 {
-    width: auto;
+    min-width: 10em;
   }
 
   .section > div:first-child {
@@ -176,8 +178,5 @@
   }
   .section > div:first-child > hr {
     height: 5px;
-  }
-  .article {
-    min-width: 100%;
   }
 }

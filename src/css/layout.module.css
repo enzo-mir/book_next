@@ -9,7 +9,7 @@
 }
 
 .footer p {
-  font-size: clamp(1em, 0.8vw, 3em);
+  font-size: clamp(0.8em, 0.9vw, 3em);
 }
 
 /* HEADER */
@@ -30,6 +30,7 @@
   gap: 0.5em;
   font-size: clamp(2.5em, 2vw, 10em);
   font-family: var(--font-nimpkish);
+  text-wrap: nowrap;
 }
 
 .header > h1 a {
@@ -51,7 +52,7 @@
   color: var(--segondary-clr);
   cursor: pointer;
   transition: all 0.15s ease-out;
-  font-size: clamp(0.3em, 2vw, 0.5em);
+  font-size: clamp(0.4em, 2vw, 0.5em);
   font-family: var(--font-nimpkish);
   letter-spacing: 0.2ch;
 
@@ -137,7 +138,7 @@
 }
 .burger {
   position: absolute;
-  top: 1em;
+  top: 0.5em;
   right: 1em;
   display: flex;
   flex-direction: column;
@@ -187,13 +188,13 @@
   transform: translate(15px, -5px) rotatez(45deg);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .burger {
     display: none;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .header {
     position: fixed;
     grid-template-columns: 1fr;
@@ -208,10 +209,16 @@
     background: linear-gradient(white 25%, transparent);
     width: 100%;
     transition: all 0.3s ease-out;
+    backdrop-filter: blur(10px);
   }
   .header > h1 {
     position: absolute;
-    top: 1em;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+    top: 0;
+    left: 0;
+    padding: 0.25em;
   }
   .nav,
   .socials {
@@ -328,26 +335,27 @@
   .galery {
     grid-template-columns: repeat(2, 1fr);
   }
+  .galery > li > article {
+    width: 100%;
+  }
 
   .galery > li:nth-child(3) {
     display: none;
   }
-}
-
-@media screen and (max-width: 650px) {
   .main {
-    padding-block-start: calc(50px + 3em);
-    grid-template-rows: 30% 0.7fr;
+    grid-template-rows: 0.3fr 1fr;
     width: 100%;
   }
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 650px) {
   .header_section > aside {
     display: none;
   }
 
   .galery {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 0.5fr);
+    justify-content: center;
   }
 
   .galery > li:nth-child(2) {

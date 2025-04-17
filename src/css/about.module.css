@@ -10,7 +10,6 @@
 
 .main > h2 {
   mix-blend-mode: difference;
-  font-size: clamp(25px, 2vw, 30px);
   color: var(--segondary-clr);
   align-self: flex-start;
   font-family: var(--font-nimpkish);
@@ -74,6 +73,7 @@
     text-align: left;
   }
 }
+
 .article > aside {
   display: flex;
   flex-direction: column;
@@ -118,7 +118,7 @@
     overflow-x: hidden;
     align-items: flex-start;
     padding-inline: 1em;
-    width: 80svw;
+    width: 90svw;
   }
   .timeline_section > hr {
     left: 0;
@@ -141,10 +141,20 @@
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    & > aside > * {
+      text-align: left;
+      text-wrap: wrap;
+      text-justify: balance;
+    }
+  }
+  .article > aside > h3 {
+    text-wrap: wrap;
+    font-size: clamp(1.5em, 1.5vw, 3em);
   }
 
   .article > img {
-    position: sticky;
+    width: 2.5em;
+    padding: 0.2em;
     align-self: flex-start;
   }
   .article > aside {

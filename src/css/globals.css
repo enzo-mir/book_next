@@ -60,17 +60,26 @@ p {
   font-size: clamp(1.1em, 1svw, 5em);
 }
 
-@media screen and (max-width: 1000px) {
-  main,
+@media screen and (max-width: 800px) {
   header {
     padding-inline: 2em;
   }
+
+  main {
+    padding-block: 5em 5em;
+  }
+
   h1,
   h2 {
     font-weight: lighter;
   }
 }
-
+@media screen and (max-height: 700px) {
+  main {
+    min-height: 100svh;
+    height: max-content;
+  }
+}
 @media screen and (max-width: 650px) {
   body {
     grid-template-rows: 1fr auto;
