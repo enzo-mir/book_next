@@ -1,6 +1,6 @@
 import styles from "@css/about.module.css";
 import Timeline from "@components/timeline";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import useGetData from "../provider/get_data";
 import { useTranslation } from "react-i18next";
 

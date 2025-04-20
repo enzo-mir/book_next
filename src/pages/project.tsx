@@ -1,5 +1,5 @@
 import styles from "@css/project.module.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import useGetData from "@provider/get_data";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";

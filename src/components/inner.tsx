@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import styles from "@css/inner.module.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useLocation } from "react-router-dom";
 
 export default function Inner({ children }: { children: ReactNode }) {

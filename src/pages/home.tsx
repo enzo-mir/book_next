@@ -1,5 +1,5 @@
 import styles from "@css/layout.module.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import React, { Suspense } from "react";
 import { useTranslation } from "react-i18next";
 const Card = React.lazy(() => import("@components/card"));
@@ -12,7 +12,9 @@ export default function Home() {
       <section className={styles.header_section}>
         <h2>
           <motion.span
-            initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" }}
+            initial={{
+              clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+            }}
             animate={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
               transition: { duration: 0.2, delay: 0.25 },
@@ -21,10 +23,12 @@ export default function Home() {
             {t("index.p1")}
           </motion.span>
           <motion.span
-            initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" }}
+            initial={{
+              clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+            }}
             animate={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
-              transition: { delay: 0.25, duration: 0.2 },
+              transition: { delay: 0.4, duration: 0.2 },
             }}
           >
             {t("index.p2")}

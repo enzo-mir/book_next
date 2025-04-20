@@ -5,7 +5,7 @@
   grid-template-columns: 100%;
   max-width: 100svw;
   place-items: center start;
-  gap: 5%;
+  gap: clamp(5%, 10svh, 10svh);
   padding-inline: 0;
   padding-top: 5%;
 }
@@ -33,7 +33,7 @@
   grid-template-rows: auto 1fr;
   gap: 3em;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   padding-block: 2em;
 }
 
@@ -69,6 +69,8 @@
   align-items: center;
   width: fit-content;
   padding-inline-end: 1em;
+  overflow: visible !important;
+  padding-block-start: 1em;
 }
 .section > div:last-child:hover {
   cursor: grab;
@@ -81,15 +83,16 @@
   gap: 1em;
   width: clamp(400px, 25svw, 100%);
   transition: all 0.5s ease-out;
+  padding-block-start: 1em;
   height: 100%;
 }
 
 .article[data-visible="true"] {
-  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
 }
 
 .article[data-visible="false"] {
-  opacity: 0 !important;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) !important;
 }
 .article > img {
   border-radius: 1em;

@@ -1,5 +1,5 @@
 import styles from "@css/card.module.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import useGetData from "@provider/get_data";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -20,15 +20,14 @@ const Card = () => {
   });
 
   return shuffledArray.map((obj, index) => (
-    <motion.li
-      key={obj.id}
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: -0, opacity: 1, transition: { delay: 0.5 + index * 0.2 } }}
-    >
+    <motion.li key={obj.id} className={styles.card_container}>
       <motion.article
         className={styles.card}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: -0, opacity: 1, transition: { duration: 0.5 } }}
+        initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" }}
+        animate={{
+          clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+          transition: { delay: 0.25 + 0.3 * index, duration: 0.3 },
+        }}
         onClick={() => navigate(`/portfolio/${obj.id}`)}
       >
         <img

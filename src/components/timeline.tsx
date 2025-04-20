@@ -1,5 +1,5 @@
 import styles from "@css/about.module.css";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import type { timeline } from "@locales/en/translate.json";
 
 const Timeline = ({ data }: { data: (typeof timeline)[0] }) => {

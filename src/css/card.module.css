@@ -1,14 +1,12 @@
 .card {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: flex-end;
   width: 20svw;
   max-width: 100%;
   aspect-ratio: 1/1.2;
-  box-shadow:
-    20px 20px 60px #d9d9d9,
-    -20px -20px 60px #ffffff;
   border-radius: 1em;
   font-family: var(--font-nimpkish);
 }
@@ -16,14 +14,11 @@
   cursor: pointer;
 }
 .card > img {
-  position: absolute;
-  top: 0;
-  left: 0;
   object-fit: cover;
-  object-position: top;
-  border-radius: 1em;
+  object-position: center center;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   max-width: 100%;
-
   z-index: -1;
 }
 
@@ -37,9 +32,6 @@
 
 @media screen and (max-width: 650px) {
   .card {
-    box-shadow:
-      20px 20px 20px hsla(0, 0%, 75%, 0.6),
-      -20px -20px 20px hsla(0, 0%, 100%, 0.6);
     min-width: 250px;
   }
 }
