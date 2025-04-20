@@ -6,13 +6,7 @@ import type { data } from "@locales/en/translate.json";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const Article = ({
-  project,
-  id,
-}: {
-  project: (typeof data)[0];
-  id: number;
-}) => {
+const Article = ({ project, id, mapId }: { project: (typeof data)[0]; id: number; mapId: number }) => {
   const { t } = useTranslation();
   const ref = useRef<ComponentRef<"article">>(null);
   const isInView = useInView(ref, { once: true });
@@ -20,8 +14,8 @@ const Article = ({
   return (
     <motion.article
       className={styles.article}
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1, transition: { delay: 1 } }}
+      initial={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+      animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: { delay: 0.5 + mapId * 0.4 } }}
       ref={ref}
       data-visible={isInView}
     >
@@ -34,36 +28,21 @@ const Article = ({
   );
 };
 
-const ProjectCard = ({
-  containerRef,
-  filter,
-}: {
-  containerRef: RefObject<HTMLElement | null>;
-  filter: typeof data;
-}) => {
+const ProjectCard = ({ containerRef, filter }: { containerRef: RefObject<HTMLElement | null>; filter: typeof data }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(0);
   const [distortion, setDistortion] = useState(0);
 
   return (
     <div
-      onMouseDown={(e) =>
-        handleDragStart(
-          e,
-          setPosition,
-          position,
-          setDistortion,
-          sliderRef,
-          containerRef,
-        )
-      }
+      onMouseDown={(e) => handleDragStart(e, setPosition, position, setDistortion, sliderRef, containerRef)}
       ref={sliderRef}
       style={{
         transform: `translateX(${position}px) skewX(${distortion}deg)`,
       }}
     >
-      {filter.map((project) => {
-        return <Article key={project.id} id={project.id} project={project} />;
+      {filter.map((project, id) => {
+        return <Article key={project.id} mapId={id} id={project.id} project={project} />;
       })}
     </div>
   );

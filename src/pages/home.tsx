@@ -12,20 +12,19 @@ export default function Home() {
       <section className={styles.header_section}>
         <h2>
           <motion.span
-            initial={{ opacity: 0, translateX: "2%" }}
+            initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" }}
             animate={{
-              opacity: 1,
-              translateX: "0%",
+              clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+              transition: { duration: 0.2, delay: 0.25 },
             }}
           >
             {t("index.p1")}
           </motion.span>
           <motion.span
-            initial={{ opacity: 0, translateX: "2%" }}
+            initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)" }}
             animate={{
-              opacity: 1,
-              translateX: "0%",
-              transition: { delay: 0.25 },
+              clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+              transition: { delay: 0.25, duration: 0.2 },
             }}
           >
             {t("index.p2")}

@@ -9,10 +9,8 @@ import Footer from "@components/footer";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    <Inner>
-      <Header />
-      <Navigation />
-      <Footer />
-    </Inner>
-  </BrowserRouter>,
+    <Header />
+    <Navigation />
+    <Footer />
+  </BrowserRouter>
 );

@@ -272,7 +272,6 @@
 .header_section > h2 {
   display: grid;
   font-size: clamp(2.5em, 2vw, 10em);
-
   font-family: var(--font-nimpkish);
 }
 .header_section > h2 > span {

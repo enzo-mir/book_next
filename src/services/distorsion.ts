@@ -6,13 +6,12 @@ export const handleDragStart = (
   position: number,
   setDistortion: (value: number) => void,
   sliderRef: RefObject<HTMLDivElement | null>,
-  containerRef: RefObject<HTMLElement | null>,
+  containerRef: RefObject<HTMLElement | null>
 ) => {
   event.preventDefault();
   if (!sliderRef.current || !containerRef.current) return;
 
-  const maxDrag =
-    -sliderRef.current?.offsetWidth + containerRef.current?.offsetWidth - 16;
+  const maxDrag = -sliderRef.current?.offsetWidth + containerRef.current?.offsetWidth - 16;
 
   const startX = event.clientX;
   const startLeft = position;
@@ -29,9 +28,9 @@ export const handleDragStart = (
       } else {
         setPosition(startLeft + deltaX);
         if (deltaX / 10 < -10) {
-          setDistortion(-10);
+          setDistortion(-8);
         } else if (deltaX / 10 > 10) {
-          setDistortion(10);
+          setDistortion(8);
         } else {
           setDistortion(deltaX / 10);
         }
@@ -41,10 +40,10 @@ export const handleDragStart = (
 
   const handleDragEnd = () => {
     setDistortion(0);
-    document.removeEventListener("mousemove", handleDragMove);
-    document.removeEventListener("mouseup", handleDragEnd);
+    sliderRef.current!.removeEventListener("mousemove", handleDragMove);
+    sliderRef.current!.removeEventListener("mouseup", handleDragEnd);
   };
 
-  document.addEventListener("mousemove", handleDragMove);
-  document.addEventListener("mouseup", handleDragEnd);
+  sliderRef.current.addEventListener("mousemove", handleDragMove);
+  sliderRef.current.addEventListener("mouseup", handleDragEnd);
 };
