@@ -167,8 +167,3 @@
   }
 }
 
-@media screen and (max-height: 700px) {
-  .main {
-    padding-block: 3em 2em;
-  }
-}
